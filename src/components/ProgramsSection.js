@@ -7,7 +7,7 @@ const programs = [
     age: "Age 2–3 years",
     description:
       "The program is designed around play and caters to the development of Physical and Socio-Emotional Skills. The activities in the curriculum help children build a foundation for playing, exploring and learning developmentally.",
-    image: "/images/playgroup.jpg",
+    image: "/assets/about.webp",
     bgColor: "#cfd8ff",
   },
   {
@@ -15,25 +15,25 @@ const programs = [
     age: "Age 3–4 years",
     description:
       "The program is designed to give children a strong foundation of inquiry-based learning through play, stories, dance and more. The activities in the curriculum help nurture the child’s growing brain and stimulate their language and communication.",
-    image: "/images/Primary.jpg",
+    image: "/assets/geographylab.webp",
     bgColor: "#fff9b3",
   },
   {
-    title: "Middle",
-    age: "Age 4–5 years",
+    title: "Middle & Senior",
+    age: "Age 5–11 years",
     description:
       "The program is infused with activities that help children in foundational literacy and numeracy and strengthen their language and communication skills. Children enjoy logic and analytical activities in the curriculum.",
-    image: "/images/middle.jpg",
+    image:"/assets/arts.webp",
     bgColor: "#ffe1b3",
   },
-  {
-    title: "Senior",
-    age: "Age 5–6 years",
-    description:
-      "The program ensures that children are now able to read and write fluently and are strong in numerical skills. Children engage with science and technology in a play infused manner and are confident communicators, thinkers and creators.",
-    image: "/images/senior.jpg",
-    bgColor: "#b3d4ff",
-  },
+  // {
+  //   title: "Senior",
+  //   age: "Age 5–6 years",
+  //   description:
+  //     "The program ensures that children are now able to read and write fluently and are strong in numerical skills. Children engage with science and technology in a play infused manner and are confident communicators, thinkers and creators.",
+  //   image: "/images/senior.jpg",
+  //   bgColor: "#b3d4ff",
+  // },
 ];
 
 export default function ProgramsSection() {
