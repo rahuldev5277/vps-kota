@@ -8,7 +8,7 @@ export default function Header() {
         id="contact"
         className="flex"
         style={{
-          backgroundImage: "url('/assets/building-img.webp')",
+          backgroundImage: "url('/assets/banner.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -16,8 +16,6 @@ export default function Header() {
         }}
       >    <article>
         <h1 className="title big">Welcome to <br/><em>Vidyashram</em> Public School</h1>
-        <p>At Vidyashram Public School, we believe in nurturing every child’s potential by blending ancient values with the demands of modern education. We strive to create a disciplined, safe, and engaging learning environment where students become responsible, respectful, and resourceful individuals.</p>
-        <a href="https://vpskota.co.in/" target="_blank" className="btn btn_3">Explore more</a> 
     </article>
 
     {/* ENQUERY FORM */}

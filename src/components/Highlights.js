@@ -39,16 +39,24 @@ export default function Highlights() {
     },
     {
       icon: "🏆",
-      text: "Most Awarded School in City",
+      number: "10,000",
+      text: "Students",
     },
     {
       icon: "🏠",
-      text: "Day-cum Boarding School",
+      number: "10,000",
+      text: "Teachers",
     },
   ];
 
   return (
-    <section className="highlights-section">
+    <section className="highlights-section" style={{
+          backgroundImage: "url('/assets/bg-2.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          color: "white",
+        }}>
       <div className="overlay"></div>
 
       <div className="content">
@@ -64,16 +72,6 @@ export default function Highlights() {
               <p className="text">{item.text}</p>
             </div>
           ))}
-        </div>
-
-        <div className="countdown">
-          <h3>Admissions Open Countdown</h3>
-          <div className="timer">
-            <div><span>{timeLeft.days}</span><small>Days</small></div>
-            <div><span>{timeLeft.hours}</span><small>Hours</small></div>
-            <div><span>{timeLeft.minutes}</span><small>Minutes</small></div>
-            <div><span>{timeLeft.seconds}</span><small>Seconds</small></div>
-          </div>
         </div>
 
         

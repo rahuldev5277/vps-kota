@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@200..700&display=swap'); 
 /* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -13,6 +13,10 @@
     monospace;
 } */
 
-body {
-  font-family: 'Oswald';
+body ,*{
+  font-family: 'Raleway' !important;
+  font-weight: 500;
+}
+.title{
+  font-weight: 800;
 }
