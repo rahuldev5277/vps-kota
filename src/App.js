@@ -1,0 +1,31 @@
+import React from "react";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import About from "./components/About";
+import Infrastructure from "./components/Infrastructure";
+import Events from "./components/Events";
+import Detail from "./components/Detail";
+
+function App() {
+  return (
+<>
+  <body>
+
+    <Navbar/>
+    <Header/>
+    <About/>
+    <Events/>
+    <Infrastructure/>
+    <Detail/>
+    <Footer/>
+
+  </body>
+
+	
+    </>
+  );
+}
+
+export default App;
