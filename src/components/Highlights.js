@@ -76,7 +76,7 @@ export default function Highlights() {
           </div>
         </div>
 
-        <div className="side-label">ADMISSIONS OPEN 2026–27</div>
+        
       </div>
     </section>
   );
