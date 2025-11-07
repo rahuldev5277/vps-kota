@@ -1,0 +1,121 @@
+.highlights-section {
+  position: relative;
+  background-image: url("/images/highlights-bg.jpg"); /* add your background image */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 20, 60, 0.8);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.underline {
+  width: 80px;
+  height: 3px;
+  background-color: #a5ff3c;
+  margin: 0 auto 20px;
+}
+
+.subtitle {
+  color: #d1d1d1;
+  margin-bottom: 50px;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.highlight-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  font-size: 50px;
+  color: #a5ff3c;
+  margin-bottom: 10px;
+}
+
+.number {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.text {
+  font-size: 16px;
+  color: #d1d1d1;
+}
+
+/* Countdown section */
+.countdown {
+  margin-top: 40px;
+}
+
+.countdown h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.timer div {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px 25px;
+  border-radius: 10px;
+  min-width: 70px;
+}
+
+.timer span {
+  display: block;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.timer small {
+  font-size: 12px;
+  color: #ccc;
+}
+
+/* Right side label */
+.side-label {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) rotate(90deg);
+  background-color: #d62828;
+  color: #fff;
+  padding: 8px 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 3;
+}

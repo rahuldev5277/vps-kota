@@ -7,6 +7,8 @@ import About from "./components/About";
 import Infrastructure from "./components/Infrastructure";
 import Events from "./components/Events";
 import Detail from "./components/Detail";
+import ProgramsSection from "./components/ProgramsSection";
+import Highlights from "./components/Highlights";
 
 function App() {
   return (
@@ -16,7 +18,9 @@ function App() {
     <Navbar/>
     <Header/>
     <About/>
+    <ProgramsSection/>
     <Events/>
+    <Highlights/>
     <Infrastructure/>
     <Detail/>
     <Footer/>
