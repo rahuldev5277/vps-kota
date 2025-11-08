@@ -73,8 +73,12 @@ export default function ProgramsSection() {
   );
 
   return (
+    <section className="programs-section">
+  
     <section ref={sectionRef} className="programs-section">
       <h2 className="section-title">Our Early Learning Programs</h2>
+        <span className="bar"></span>
+
       <p className="section-subtitle">
         Carefully designed programs to nurture every stage of your child’s growth.
       </p>
@@ -95,6 +99,7 @@ export default function ProgramsSection() {
           </div>
         ))}
       </div>
+        <hr className="hr" />
     </section>
   );
 }

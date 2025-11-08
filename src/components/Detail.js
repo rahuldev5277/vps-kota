@@ -4,6 +4,7 @@ import "../App.css";
 export default function Detail() {
   return (
     <div>
+    <hr className="hr" />
       {/* <!--division_4--> */}
     <div className="divisions division_4" onmousemove="animate_balls(event)">
         <div className="title_header">
@@ -36,6 +37,7 @@ export default function Detail() {
             </section>
         </div>
     </div>
+    <hr className="hr" />
     </div>
   )
 }

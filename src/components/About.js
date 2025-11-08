@@ -42,6 +42,7 @@ export default function About() {
 
   return (
     <div>
+      <hr className="hr" />
       {/* <!--division_2--> */}
     <div id="about" className="divisions division_2 flex">
         <section className="flex_content padding_2x">
@@ -58,6 +59,7 @@ export default function About() {
             </div>
         </section>
     </div>
+      <hr className="hr" />
     </div>
   )
 }
