@@ -37,11 +37,11 @@ export default function Navbar() {
 
   <div className="flex_contents contact_section">
     <a href="mailto:info@vidyashram.com">
-      <i className="fa fa-envelope-o"></i>
+      <i className="fa fa-envelope"></i>
       info@vidyashram.com
     </a>
     <a href="tel:+917340065179">
-      <i className="fa fa-headphones"></i>
+      <i className="fa fa-phone"></i>
       +91 734 006 5179
     </a>
   </div>
@@ -81,6 +81,7 @@ export default function Navbar() {
         <li className="fixed_flex"><a href="javascript:void(0)" className="btn btn_1 chat_popup">SignUp/LogIn</a> <a href="#" className="btn btn_2 chat_popup">Admission</a> </li>
     </ul>
 </menu> */}
+    
     </div>
   )
 }

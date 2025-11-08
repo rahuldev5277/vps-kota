@@ -9,6 +9,7 @@ import Events from "./components/Events";
 import Detail from "./components/Detail";
 import ProgramsSection from "./components/ProgramsSection";
 import Highlights from "./components/Highlights";
+import Testimonials from "./components/Testimonials";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
     <Events/>
     <Highlights/>
     <Infrastructure/>
+    {/* <Testimonials/> */}
     <Detail/>
     <Footer/>
 

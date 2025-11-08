@@ -4,6 +4,7 @@ import"../App.css";
 export default function Footer() {
   return (
     <div>
+      <hr className="hr" />
       <footer className="padding_4x">
     <div className="top_footer flex">
         <section className="flex_content">
@@ -24,6 +25,9 @@ export default function Footer() {
                 <strong className="title">Vidyashram </strong> Public School
             </figcaption>
         </figure>
+      
+    </section>
+    <section className="flex_content padding_1x">
         <a href="#">
             <i className="fa fa-map-marker"></i>
            Vidya Vihar, Naya Nohra, Baran Road, Kota. 
@@ -36,9 +40,7 @@ export default function Footer() {
             <i className="fa fa-headphones"></i>
             7340065179, 7340066179
         </a>
-    </section>
-    <section className="flex_content padding_1x">
-      <h3>Quick Links</h3>
+      {/* <h3>Quick Links</h3>
       <a href="/">Admission</a>
       <a href="/">Prospectus</a>
       <a href="/">Student registration</a>
@@ -48,7 +50,7 @@ export default function Footer() {
       <h3>Other Links</h3>
       <a href="#about">About Us</a>
     <a href="#news&event">News & Evnts</a>
-    <a href="#contact">Contact</a>
+    <a href="#contact">Contact</a> */}
     </section>
     {/* <section className="flex_content padding_1x">
       <h3>Newsletter</h3>

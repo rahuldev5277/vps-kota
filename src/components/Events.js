@@ -4,6 +4,7 @@ import "../App.css";
 export default function Events() {
   return (
     <div>
+      <hr className="hr" />
       {/* <!--division_3--> */}
     <div className="divisions division_3 padding_2x">
       <section className="title_header center_title">
@@ -53,6 +54,7 @@ export default function Events() {
         </div>
       </section>
     </div>
+    <hr className="hr" />
     </div>
   )
 }
