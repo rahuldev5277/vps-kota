@@ -1,13 +1,26 @@
 import React from 'react'
 import "../App.css";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Events() {
+    
+  useGSAP(() => {
+    
+   
+
+  });
+ 
+
   return (
     <div>
       {/* <!--division_3--> */}
-    <div className="divisions division_3 padding_2x">
+    <div id='event' className="divisions division_3 padding_2x">
       <section className="title_header center_title">
-        <h1 id = "news&event" className="title">News & Events</h1>
+        <h1 id = "newstitle" className="title">News & Events</h1>
         <span className="bar"></span>
       </section>
 
