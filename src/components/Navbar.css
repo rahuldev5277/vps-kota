@@ -1,0 +1,114 @@
+/* ===== Navbar Top Section ===== */
+.navbar {
+  width: 100%;
+  height: 18%;        
+  background-color: #ffffff;
+  border-bottom: 2px solid #009245;
+}
+
+.navbar-top .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  flex-wrap: wrap;
+}
+
+/* ===== Left Section (Logo + Text) ===== */
+.navbar-top .logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-top img {
+  height: 60px;
+  width: auto;
+}
+
+.navbar-top h1 {
+  color: #0b2c73;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.navbar-top h2 {
+  color: #0b2c73;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* ===== Right Section ===== */
+.navbar-top .contact-section {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* Email and Phone */
+.navbar-top .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.navbar-top .contact-item a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-top .contact-item a:hover {
+  color: #0b2c73;
+}
+
+.navbar-top .contact-item svg {
+  color: #555;
+  font-size: 16px;
+}
+
+/* ===== Social Icons ===== */
+.navbar-top .social-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-top .social-icons a {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #999;
+  border-radius: 50%;
+  color: #555;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.navbar-top .social-icons a:hover {
+  background-color: #0b2c73;
+  border-color: #0b2c73;
+  color: #fff;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 900px) {
+  .navbar-top .container {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .navbar-top .contact-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

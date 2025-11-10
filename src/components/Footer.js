@@ -1,5 +1,9 @@
 import React from "react";
 import "./Footer.css";
+import { faFacebook, faInstagram, faLinkedin, faTwitch } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot, faPhone, faVoicemail } from "@fortawesome/free-solid-svg-icons";
+import { faMessage } from "@fortawesome/free-regular-svg-icons";
 
 export default function Footer() {
   return (
@@ -37,7 +41,7 @@ export default function Footer() {
           <figure className="logo fixed_flex">
             <img src="/assets/logo.png" alt="School Logo" />
             <figcaption>
-              <strong className="title">Vidyashram</strong> Public School
+              <strong className="footertitle">Vidyashram</strong> Public School
             </figcaption>
           </figure>
         </section>
@@ -48,14 +52,15 @@ export default function Footer() {
       <div className="footer_info"> 
          <section className="flex_content padding_1x right_footer">
           <a href="#">
-            <i className="fa fa-map-marker"></i> Vidya Vihar, Naya Nohra,<br/> Baran
+          <FontAwesomeIcon icon ={faLocationDot}/>
+ Vidya Vihar, Naya Nohra,<br/> Baran
             Road, Kota.
           </a>
           <a href="mailto:info@vpskota.co.in">
-            <i className="fa fa-envelope-o"></i> info@vpskota.co.in
+            <FontAwesomeIcon icon ={faMessage}/> info@vpskota.co.in
           </a>
           <a href="tel:7340065179">
-            <i className="fa fa-headphones"></i> 7340065179, 7340066179
+            <FontAwesomeIcon icon ={faPhone}/> 7340065179, 7340066179
           </a>
         </section>
       </div>
@@ -65,26 +70,26 @@ export default function Footer() {
         <section className="flex-content padding_1x">
           <p>© 2025 Vidyashram Public School, Kota — All Rights Reserved</p>
         </section>
-        <section className="flex-content padding_1x social_links">
+        <section className="flex-content padding_1x social_links" style={{fontSize:"30px", color:"#fef9f9ff"}}>
           <a
             href="https://www.facebook.com/people/Vidyashram-Public-School/100063848952012/"
             target="_blank"
             rel="noreferrer"
           >
-            <i className="fa fa-facebook"></i>
+           <FontAwesomeIcon icon ={faFacebook}/>
           </a>
           <a
             href="https://www.instagram.com/vidyashrampublicschool/"
             target="_blank"
             rel="noreferrer"
           >
-            <i className="fa fa-instagram"></i>
+           <FontAwesomeIcon icon ={faInstagram}/>
           </a>
           <a href="/" target="_blank" rel="noreferrer">
-            <i className="fa fa-twitter"></i>
+           <FontAwesomeIcon icon ={faTwitch}/>
           </a>
           <a href="/" target="_blank" rel="noreferrer">
-            <i className="fa fa-linkedin"></i>
+            <FontAwesomeIcon icon ={faLinkedin}/>
           </a>
         </section>
       </div>
