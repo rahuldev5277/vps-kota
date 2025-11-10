@@ -1,0 +1,161 @@
+
+/*division_4*/
+.division_4{
+    z-index:11;
+}
+
+.division_4 .title_header{
+    width:50%;
+}
+
+.division_4 .title_header .btn{
+    margin:auto;
+    border-radius:40px;
+    padding:0.5rem 1rem;
+}
+
+.division_4 .title_header aside{
+    align-items:center;
+    justify-content:center;
+}
+
+.division_4 .title_header aside .fa{
+    background-color:rgba(1,1,1,0.2);
+    border-radius:50%;
+    width:30px;
+    height:30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-right:10px;
+    color:var(--gray);
+}
+
+.division_4 .title_header aside .btn{
+    margin:0 0.5rem;
+}
+
+.division_4 .title_header aside a:first-child{
+    color:var(--white) !important;
+}
+
+.division_4 .title_header aside a:last-child{
+    color:var(--gray);
+}
+
+.division_4 .title_header p{
+    color:var(--gray);
+}
+
+.division_4 .title_header .bar{
+    margin:auto;
+}
+
+.division_4 .cards{
+    padding:1rem 4rem;
+    position:relative;
+}
+
+.division_4 .cards:before, .division_4 .cards:after{
+    content:"";
+    position:absolute;
+    width:150px;
+    height:150px;
+    z-index:-1;
+}
+
+.ball{
+    position:absolute;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:var(--primary);
+}
+
+.division_4 .cards:before{
+    background-image:url("https://i.postimg.cc/3NQzzcK3/dots.png");
+    top:0;
+    left:2%;
+    animation: arrows 4s 0s infinite;
+}
+
+.division_4 .cards:after{
+    background-image:url("https://i.postimg.cc/3NQzzcK3/dots.png");
+    bottom:0;
+    right:2%;
+    animation: arrows 6s 0s infinite;
+}
+
+.ball:nth-child(1){
+    width:30px;
+    height:30px;
+    left:10%;
+    top:5%;
+    animation: arrows 10s 0s infinite;
+}
+
+.ball:nth-child(2){
+    width:30px;
+    height:30px;
+    right:10%;
+    bottom:5%;
+    animation: arrows 10s 0s infinite;
+}
+
+.ball:nth-child(3){
+    width:50px;
+    height:50px;
+    left:50%;
+    top:20%;
+    transform:translate(-50%, -20%);
+    animation: arrows 10s 0s infinite;
+}
+
+.ball:nth-child(4){
+    width:50px;
+    height:50px;
+    left:3%;
+    bottom:0%;
+    animation: arrows 15s 0s infinite;
+}
+
+.division_4 .cards figure{
+    height:70vh;
+    margin:2%;
+    border-radius:140px;
+    overflow:hidden;
+    position:relative;
+}
+
+.division_4 .cards figure:nth-child(2), .division_4 .cards figure:nth-child(3){
+    top:4rem;
+}
+
+.division_4 figure img{
+    object-fit:cover;
+    width:100%;
+    height:100%;
+}
+
+.division_4 .cards section{
+    background-image:url("https://i.postimg.cc/g0Jw6Mbc/line.png");
+    background-size:70% auto;
+    background-repeat:no-repeat;
+    background-position:center;
+    width:100%;
+}
+
+@media (max-width:920px){
+    .division_4 .title_header{
+        width:100%;
+        padding:1rem;
+    }
+    
+    .division_4 .cards figure{
+        height:200px;
+    }
+    
+    .division_4 .cards:after{
+        display:none;
+    }
+}

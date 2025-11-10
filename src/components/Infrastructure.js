@@ -56,7 +56,7 @@ const Infrastructure = () => {
     <div className="divisions division_3 padding_2x">
       <section className="title_header center_title">
         <h1 className="title">Infrastructure</h1>
-        <span className="bar"></span>
+        <div className="lineinfra"></div>
       </section>
 
       <section className="carousel-container">

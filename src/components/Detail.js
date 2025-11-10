@@ -1,5 +1,5 @@
 import React from 'react'
-import "../App.css";
+import "./detail.css";
 
 export default function Detail() {
   return (
@@ -9,11 +9,7 @@ export default function Detail() {
         <div className="title_header">
             <h2 className="title medium">We promise best future for your kids</h2>
             <p>At Vidyashram Public School, we believe that meaningful learning goes beyond books and layouts — our focus is on creating engaging and thoughtful experiences that inspire every student.</p>
-            <aside className="fixed_flex">
-                {/* <a href="/" className="btn btn_1">Explore more</a> */}
-                {/* <i className="fa fa-angle-right"></i> */}
-                {/* <a href="javascript:void(0)">Gallery Portfolio</a> */}
-            </aside>
+           
         </div>
         <div className="cards">
             <span className="ball"></span>
