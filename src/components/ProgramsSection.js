@@ -101,5 +101,6 @@ export default function ProgramsSection() {
       </div>
         <hr className="hr" />
     </section>
+    </section>
   );
 }
