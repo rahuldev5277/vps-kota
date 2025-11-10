@@ -1,86 +1,43 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import "./Infrastructure.css";
 
 const Infrastructure = () => {
   const images = [
-    "/assets/about.webp",
-    "/assets/art.webp",
-    "/assets/arts.webp",
-    "/assets/biolab.webp",
-    "/assets/chemistrylab.webp",
-    "/assets/computerlab.webp",
-    "/assets/geographylab.webp",
-    "/assets/lab.webp",
-    "/assets/clab.webp",
+    "/assets/1.webp",
+    "/assets/2.webp",
+    "/assets/3.webp",
+    "/assets/4.webp",
+    "/assets/3.webp",
+    "/assets/4.webp",
   ];
 
-  // Group images in sets of 3
-  const slides = [];
-  for (let i = 0; i < images.length; i += 3) {
-    slides.push(images.slice(i, i + 3));
-  }
-
-  // Clone first slide for seamless loop
-  const extendedSlides = [...slides, slides[0]];
-
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const trackRef = useRef(null);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => prev + 1);
-    }, 3000); // every 3s
-
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    if (currentSlide === extendedSlides.length - 1) {
-      // When reaching the cloned slide
-      const timeout = setTimeout(() => {
-        // Disable transition temporarily
-        trackRef.current.style.transition = "none";
-        setCurrentSlide(0);
-
-        // Re-enable transition after a short delay
-        setTimeout(() => {
-          trackRef.current.style.transition = "transform 0.8s ease-in-out";
-        }, 50);
-      }, 800); // Wait for transition to finish
-
-      return () => clearTimeout(timeout);
-    }
-  }, [currentSlide, extendedSlides.length]);
-
   return (
-    <div className="divisions division_3 padding_2x">
-      <hr className="hr" />
-      <section className="title_header center_title">
-        <h1 className="title">Infrastructure</h1>
+    <div className="divisions padding_2x">
+      <section className="gallery center_title">
+        <h1 className="title">Gallery</h1>
         <div className="lineinfra"></div>
       </section>
 
-      <section className="carousel-container">
-        <div
-          ref={trackRef}
-          className="carousel-track"
-          style={{
-            transform: `translateX(-${currentSlide * 100}%)`,
-            transition: "transform 0.8s ease-in-out",
-          }}
-        >
-          {extendedSlides.map((group, index) => (
-            <div className="carousel-slide" key={index}>
-              {group.map((img, i) => (
-                <div className="card" key={i}>
-                  <img src={img} alt={`Slide ${index + 1}`} />
-                </div>
-              ))}
-            </div>
-          ))}
+      <div className="custom-gallery">
+        <div className="item medium">
+          <img src={images[0]} alt="gallery" />
         </div>
-      </section>
-      <hr className="hr" />
+        <div className="item medium">
+          <img src={images[1]} alt="gallery" />
+        </div>
+        <div className="item small">
+          <img src={images[2]} alt="gallery" />
+        </div>
+        <div className="item medium">
+          <img src={images[3]} alt="gallery" />
+        </div>
+        <div className="item small">
+          <img src={images[4]} alt="gallery" />
+        </div>
+        <div className="item medium">
+          <img src={images[5]} alt="gallery" />
+        </div>
+      </div>
     </div>
   );
 };

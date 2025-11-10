@@ -1,8 +1,26 @@
 import React from 'react'
 import "./events.css"
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from '@gsap/react';
 
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Events() {
+
+  useGSAP(() =>{
+      gsap.from(".card", {
+      x: -100,
+      opacity: 0,
+      duration: 1,
+      delay: 0.50,
+      scrollTrigger: {
+        trigger: ".division_3", 
+        start: "top 80%",  
+        toggleActions: "play none none none", 
+      },
+    });
+  })
     
   return (
     <>
