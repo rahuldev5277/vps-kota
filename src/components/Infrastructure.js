@@ -54,6 +54,7 @@ const Infrastructure = () => {
 
   return (
     <div className="divisions division_3 padding_2x">
+      <hr className="hr" />
       <section className="title_header center_title">
         <h1 className="title">Infrastructure</h1>
         <div className="lineinfra"></div>
@@ -79,6 +80,7 @@ const Infrastructure = () => {
           ))}
         </div>
       </section>
+      <hr className="hr" />
     </div>
   );
 };

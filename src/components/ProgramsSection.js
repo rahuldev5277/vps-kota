@@ -1,5 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./ProgramsSection.css";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const programs = [
   {
@@ -23,17 +28,47 @@ const programs = [
     image: "/assets/arts.webp",
     bgColor: "#ffe1b3",
   },
-  // {
-  //   title: "Senior",
-  //   age: "Age 5–6 years",
-  //   description:
-  //     "The program ensures that children are now able to read and write fluently and are strong in numerical skills. Children engage with science and technology in a play infused manner and are confident communicators, thinkers and creators.",
-  //   image: "/images/senior.jpg",
-  //   bgColor: "#b3d4ff",
-  // },
 ];
 
 export default function ProgramsSection() {
+  const sectionRef = useRef(null);
+
+  useGSAP(
+    () => {
+      // Title bounce animation
+        gsap.from(".section-title, .section-subtitle", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        delay: 1.6,
+        scrollTrigger: {
+          trigger: ".programs-section",
+          start: "top 90%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+
+      // Animate each program card individually
+      const cards = gsap.utils.toArray(".program-card");
+      cards.forEach((card, i) => {
+        gsap.from(card, {
+          opacity: 0,
+          y: 100,
+          duration: 1.2,
+          ease: "bounce.out",
+          delay: i * 0.2, // nice stagger effect
+          scrollTrigger: {
+            trigger: card,
+            start: "top 90%",
+            toggleActions: "play none none none",
+          },
+        });
+      });
+    },
+    { scope: sectionRef } // makes sure it runs only inside this component
+  );
+
   return (
     <>
 

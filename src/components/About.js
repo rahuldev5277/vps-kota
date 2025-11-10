@@ -1,6 +1,5 @@
 import React from 'react'
 import "../App.css";   
-import "./about.css"
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from '@gsap/react';
@@ -8,6 +7,39 @@ import { useGSAP } from '@gsap/react';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
+
+  useGSAP(() =>{
+
+     gsap.from(".title_header", {
+      x: -100,
+      opacity: 0,
+      duration: 1.5,
+      delay:0.10,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: "#about", // triggers when #about enters
+        start: "top 60%",  // when top of section hits 80% of viewport
+        toggleActions: "play none none none", // only play once
+      },
+    });
+
+    // Animate image from right
+    gsap.from(".rounded-2xl", {
+      x: 100,
+      opacity: 0,
+      duration: 1.5,
+      delay:0.10,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: "#about",
+        start: "top 60%",
+        toggleActions: "play none none none", // only play once
+      },
+    });
+
+
+})
+
   return (
     <div>
 

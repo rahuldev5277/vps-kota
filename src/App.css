@@ -11,6 +11,13 @@
     box-sizing: border-box;
 }
 
+hr {
+  margin: 2rem 0; /* top-bottom 2rem, left-right 0 */
+  border: none;
+  border-top: 1px solid #ccc; /* optional: color customize kar lo */
+}
+
+
 :root{
     --white:#FFF;
     --black:#000;
@@ -751,10 +758,11 @@ footer .flex:last-child a:hover{
 }
 
 .top_footer{
-    width:90%;
+    width:60%;
+    height: 65%;
     position:absolute;
     left:50%;
-    top:-25%;
+    top:0%;
     transform:translate(-50%, -25%);
     border-radius:10px;
     background:var(--primary);

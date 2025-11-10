@@ -10,13 +10,13 @@ export default function Header() {
     
 useGSAP(() => {
 
-  const tl = gsap.timeline({ defaults: { ease: "power2.out", duration: 0.70 } });
+  const tl = gsap.timeline({ defaults: { ease: "power2.out", duration: 1 } });
 
-  tl.fromTo(".flex",
+   tl.fromTo(".flex",
     { backgroundSize: "110%" },  // start zoomed in
     {
       backgroundSize: "100%",    // zoom out to normal
-      duration: 0.90,
+      duration: 2.5,
       ease: "power2.out",
     }
   );
@@ -25,14 +25,19 @@ useGSAP(() => {
   tl.from("#text1", { y: -50, opacity: 0 });
 
   // 2️⃣ Animate contact form container
-  tl.from(".contact-form-container", { opacity: 0, x: 100, duration: 0.90, ease: "power3.out" }, "-=0.3");
+  tl.from(".contact-form-container", { opacity: 0, y: 100, duration: 1.2, ease: "power3.out" }, "-=0.3");
 
-
+//   // 3️⃣ Animate form elements one by one
+//   tl.from(".contact-form label, .contact-form input, .contact-form textarea, .contact-form button", {
+//     opacity: 0,
+//     y: 20,
+//     stagger: 0.2,
+//   });
 
   // 4️⃣ Animate boxes (one by one)
   tl.from("#box1", { opacity: 0, y: -100, ease: "power3.out" })
-    .from("#box2", { opacity: 0, y: -100, ease: "power3.out" }, "-=0.4") // start slightly earlier
-    .from("#box3", { opacity: 0, y: -100, ease: "power3.out" }, "-=0.4");
+    .from("#box2", { opacity: 0, y: -100, ease: "power3.out" }, "-=0.5") // start slightly earlier
+    .from("#box3", { opacity: 0, y: -100, ease: "power3.out" }, "-=0.5");
 
 
 });
