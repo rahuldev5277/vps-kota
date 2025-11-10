@@ -18,6 +18,13 @@
   color: #222;
 }
 
+.section-title span{
+    color: #ee4500;
+    text-shadow: 0 0 5px #3399ff;
+    font-weight: bold;
+
+}
+
 .section-subtitle {
   font-size: 16px;
   color: #555;
@@ -33,17 +40,38 @@
 
 .program-card {
   border-radius: 20px;
-  padding: 25px;
+  padding: 20px;
   text-align: left;
   position: relative;
   overflow: hidden;
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
 }
 
+/* Hover effect */
 .program-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
 }
+
+/* Optional: subtle overlay animation */
+.program-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: left 0.5s ease;
+}
+
+.program-card:hover::after {
+  left: 100%;
+}
+
+
 
 .program-title {
   font-size: 20px;
@@ -69,17 +97,28 @@
 
 .program-image {
   width: 100%;
-  height: 180px;
+  max-width: 400px; /* optional - limits image width */
+  height: 190px;
+  margin: 0 auto;
   border-radius: 15px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .program-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease, filter 0.3s ease;
   border-radius: 12px;
 }
+
+.program-image:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.9);
+}
+
+
