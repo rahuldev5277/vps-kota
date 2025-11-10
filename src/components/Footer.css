@@ -1,7 +1,6 @@
 .footer {
   background: linear-gradient(135deg, #0d2747, #092038);
   color: #fff;
-  font-family: "Poppins", sans-serif;
 }
 
 .footer.padding_3x{
@@ -81,7 +80,7 @@
 }
 
 .logo img {
-  width: 90px;
+  width: 157px;
 }
 
 .logo figcaption {

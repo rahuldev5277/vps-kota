@@ -1,5 +1,9 @@
 import React from 'react'
 import "../App.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocation, faPhone, faVoicemail } from "@fortawesome/free-solid-svg-icons";
+import { faMessage } from "@fortawesome/free-regular-svg-icons";
+
 export default function Navbar() {
   return (
     <div>
@@ -39,11 +43,11 @@ export default function Navbar() {
 
   <div className="flex_contents contact_section">
     <a href="mailto:info@vidyashram.com">
-      <i className="fa fa-envelope"></i>
+     <FontAwesomeIcon icon ={faMessage}/>
       info@vidyashram.com
     </a>
     <a href="tel:+917340065179">
-      <i className="fa fa-phone"></i>
+       <FontAwesomeIcon icon ={faPhone}/>
       +91 734 006 5179
     </a>
   </div>
