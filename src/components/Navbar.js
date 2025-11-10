@@ -15,13 +15,8 @@ export default function Navbar() {
             +91 734 006 5179
         </a>
     </section>
-    <section className="flex_content">
-        <a href="#" title="Facebook"><i className="fa fa-facebook"></i></a>
-        <a href="#" title="Instagram"><i className="fa fa-instagram"></i></a>
-        <a href="#" title="Twitter"><i className="fa fa-twitter"></i></a>
-        <a href="#" title="youtube"><i className="fa fa-youtube"></i></a>
-    </section>
-</menu> */}
+   
+</menu> 
 
 {/* <!--NAV--> */}
 <nav>
@@ -34,6 +29,13 @@ export default function Navbar() {
       </figcaption> */}
     </figure>
   </div>
+
+   {/* <section className="flex_content">
+        <a href="#" title="Facebook"><i className="fa fa-facebook"></i></a>
+        <a href="#" title="Instagram"><i className="fa fa-instagram"></i></a>
+        <a href="#" title="Twitter"><i className="fa fa-twitter"></i></a>
+        <a href="#" title="youtube"><i className="fa fa-youtube"></i></a>
+    </section> */}
 
   <div className="flex_contents contact_section">
     <a href="mailto:info@vidyashram.com">

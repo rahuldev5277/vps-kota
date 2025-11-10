@@ -1,0 +1,152 @@
+.footer {
+  background: linear-gradient(135deg, #0d2747, #092038);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer.padding_3x{
+      height: 45%;
+}
+
+/* === Top Section === */
+.top_footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  height: 75%;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.flex_content.principal_img{
+   display: flex;
+  margin-right: 76%;
+  margin-top: 25%;
+  padding-left: 41%;
+}
+
+.principal_img img {
+  width: 160px;
+  height: 160px;
+  border-radius: 10px;
+  border: 3px solid #ffd700;
+  object-fit: cover;
+}
+
+.flex_content.principal_msg{
+      margin-top: -32%;
+    width: 51%;
+}
+
+.principal_msg {
+  max-width: 700px;
+  text-align: left;
+}
+
+.principal_msg .title {
+  color: #ffd700;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.principal_msg p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #e0e0e0;
+  width: 40rem;
+} 
+
+/* === Footer Body === */
+.footer_body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  margin-left: -4%;
+}
+
+.left_footer {
+  flex: 1 1 40%;
+  text-align: left;
+}
+
+.right_footer {
+  flex: 1 1 40%;
+  text-align: right;
+}
+
+.logo img {
+  width: 90px;
+}
+
+.logo figcaption {
+  color: #ffd700;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.right_footer a {
+  display: block;
+  color: #fff;
+  margin: 0.4rem 0;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.right_footer a i {
+  margin-right: 8px;
+  color: #ffd700;
+}
+
+/* === Bottom Section === */
+.footer_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.social_links a {
+  color: #fff;
+  margin: 0 8px;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.social_links a:hover {
+  color: #ffd700;
+  transform: translateY(-3px);
+}
+
+ .footer_info{
+    margin-left: 83%;
+        margin-top: -8%;
+  }
+
+/* === Responsive === */
+@media (max-width: 900px) {
+  .footer_body {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .right_footer {
+    text-align: center;
+  }
+
+  .top_footer {
+    flex-direction: column;
+  }
+
+  .principal_msg {
+    text-align: center;
+  }
+}
