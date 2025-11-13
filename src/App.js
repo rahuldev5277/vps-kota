@@ -9,7 +9,8 @@ import Events from "./components/Events";
 import Detail from "./components/Detail";
 import ProgramsSection from "./components/ProgramsSection";
 import Highlights from "./components/Highlights";
-import Testimonials from "./components/Testimonials";
+import TestimonialSlider from "./components/TestimonialSlider";
+
 
 function App() {
   return (
@@ -20,10 +21,10 @@ function App() {
     <Header/>
     <About/>
     <ProgramsSection/>
-    <Events/>
+    {/* <Events/> */}
     <Highlights/>
     <Infrastructure/>
-    {/* <Testimonials/> */}
+    <TestimonialSlider/>
     <Detail/>
     <Footer/>
 

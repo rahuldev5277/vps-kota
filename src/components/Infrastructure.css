@@ -1,40 +1,48 @@
-/* Section title */
-.gallery {
+/* ==== Gallery Main Section ==== */
+.gallerymainsection {
+  width: 100%;
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==== Title Section ==== */
+.gallertitle {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 2rem;
 }
 
-.title {
+.gallertitle h1 {
   font-size: 2.5rem;
-  font-weight: 600;
-  color: #1e293b;
+  color: #010101;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-
-.lineinfra{
-  width: 200px;
+/* Decorative Line */
+.galleryline {
+  width: 300px;
   height: 4px;
-  background-color: #ee4500; /* Accent color (you can change) */
+  background-color: #ee4500;
   margin: 5px auto 0;
   border-radius: 2px;
   position: relative;
   overflow: hidden;
 }
 
-/* Optional: Animated Shine Effect */
-.lineinfra::after {
+/* Animated Shine Effect */
+.galleryline::after {
   content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.6),
-    transparent
-  );
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.6), transparent);
   animation: shine 2s linear infinite;
 }
 
@@ -47,42 +55,259 @@
   }
 }
 
-
-/* Custom gallery layout */
-.custom-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 220px;
-  gap: 20px;
-  padding: 0 10%;
-}
-
-.custom-gallery .item {
+/* ==== MAIN CONTAINER ==== */
+.diamondgallerysection {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding: 40px 0;
   position: relative;
-  overflow: hidden;
-  border-radius: 16px;
 }
 
-.custom-gallery img {
+/* ==== CUSTOM SCROLLBAR ==== */
+.diamondgallerysection::-webkit-scrollbar {
+  width: 10px;
+}
+.diamondgallerysection::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+.diamondgallerysection::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ==== SCROLL WRAPPER ==== */
+.diamond-scroll-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+
+/* ==== FIRST SECTION CONTAINER ==== */
+.firstcontainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 100px;
+  padding: 10px 0;
+}
+
+/* ==== DIAMOND WRAPPER ==== */
+.diamond-gallery {
+  transform: rotate(45deg);
+  position: relative;
+}
+
+/* ==== DIAMOND BOX ==== */
+.diamond {
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* ==== IMAGE STYLING ==== */
+.diamond img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: rotate(-45deg) scale(1.4);
   transition: transform 0.4s ease;
+}
+
+/* ==== HOVER EFFECT ==== */
+.diamond:hover img {
+  transform: rotate(-45deg) scale(1.6);
+}
+
+
+
+/* ==== SWEET PREVIEW OVERLAY ==== */
+.previewOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.previewBox {
+  position: relative;
+  background: #fff;
   border-radius: 16px;
+  padding: 10px;
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+  animation: zoomIn 0.4s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.custom-gallery img:hover {
-  transform: scale(1.05);
+.previewImg {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  border-radius: 10px;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+/* ==== NAV BUTTONS ==== */
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(238, 69, 0, 0.9);
+  border: none;
+  color: white;
+  font-size: 32px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.navBtn:hover {
+  background: #ff6633;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prevBtn {
+  left: -70px;
+}
+
+.nextBtn {
+  right: -70px;
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
 
 
-.item.medium {
-  grid-column: span 1;
-  grid-row: span 1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================= */
+/*     RESPONSIVE DESIGN     */
+/* ========================= */
+
+/* For large screens (<=1200px) */
+@media (max-width: 1200px) {
+  .diamondgallerysection {
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .firstcontainer {
+    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .diamond {
+    width: 160px;
+    height: 160px;
+  }
+
+  .gallertitle h1 {
+    font-size: 2.2rem;
+  }
 }
 
-.item.small {
-  grid-column: span 1;
-  grid-row: span 1;
+/* For tablets (<=992px) */
+@media (max-width: 992px) {
+  .firstcontainer {
+    gap: 50px;
+  }
+
+  .diamond {
+    width: 140px;
+    height: 140px;
+  }
+
+  .gallertitle h1 {
+    font-size: 2rem;
+  }
+
+  .galleryline {
+    width: 220px;
+  }
 }
 
+/* For medium devices (<=768px) */
+@media (max-width: 768px) {
+  .diamondgallerysection {
+    height: auto;
+  }
+
+  .firstcontainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .diamond {
+    width: 130px;
+    height: 130px;
+  }
+
+  .gallertitle h1 {
+    font-size: 1.8rem;
+  }
+}
+
+
+
+/* For very small devices (<=400px) */
+@media (max-width: 400px) {
+  .diamond {
+    width: 100px;
+    height: 100px;
+  }
+
+  .gallertitle h1 {
+    font-size: 1.4rem;
+  }
+
+  .galleryline {
+    width: 120px;
+  }
+}
