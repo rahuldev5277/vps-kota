@@ -1,44 +1,102 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Infrastructure.css";
 
 const Infrastructure = () => {
+  // All images in your gallery
   const images = [
-    "/assets/1.webp",
-    "/assets/2.webp",
-    "/assets/3.webp",
-    "/assets/4.webp",
-    "/assets/3.webp",
-    "/assets/4.webp",
+    "./assets/1.webp",
+    "./assets/2.webp",
+    "./assets/3.webp",
+    "./assets/4.webp",
+    "./assets/3.webp",
   ];
 
-  return (
-    <div className="divisions padding_2x">
-      <section className="gallery center_title">
-        <h1 className="title">Gallery</h1>
-        <div className="lineinfra"></div>
-      </section>
+  const [currentIndex, setCurrentIndex] = useState(null);
 
-      <div className="custom-gallery">
-        <div className="item medium">
-          <img src={images[0]} alt="gallery" />
+  // Handle next and previous
+  const nextImage = (e) => {
+    e.stopPropagation();
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevImage = (e) => {
+    e.stopPropagation();
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  // Close preview on outside click or ESC key
+  const closePreview = () => setCurrentIndex(null);
+
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (e.key === "Escape") closePreview();
+      if (e.key === "ArrowRight") nextImage(e);
+      if (e.key === "ArrowLeft") prevImage(e);
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  });
+
+  return (
+    <>
+      <div className="gallerymainsection">
+        <div className="gallertitle">
+          <h1>Gallery</h1>
+          <div className="galleryline"></div>
         </div>
-        <div className="item medium">
-          <img src={images[1]} alt="gallery" />
-        </div>
-        <div className="item small">
-          <img src={images[2]} alt="gallery" />
-        </div>
-        <div className="item medium">
-          <img src={images[3]} alt="gallery" />
-        </div>
-        <div className="item small">
-          <img src={images[4]} alt="gallery" />
-        </div>
-        <div className="item medium">
-          <img src={images[5]} alt="gallery" />
+
+        <div className="diamondgallerysection">
+          <div className="diamond-scroll-vertical">
+
+            {/* FIRST CONTAINER */}
+            <div className="firstcontainer">
+              {images.map((img, i) => (
+                <div className="diamond-gallery" key={i}>
+                  <div
+                    className="diamond"
+                    onClick={() => setCurrentIndex(i)}
+                  >
+                    <img src={img} alt={`img${i + 1}`} />
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* SECOND CONTAINER */}
+            <div className="firstcontainer">
+              {images.map((img, i) => (
+                <div className="diamond-gallery" key={`2-${i}`}>
+                  <div
+                    className="diamond"
+                    onClick={() => setCurrentIndex(i)}
+                  >
+                    <img src={img} alt={`img${i + 1}`} />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+
+      {/* ==== SWEET PREVIEW CAROUSEL ==== */}
+      {currentIndex !== null && (
+        <div className="previewOverlay" onClick={closePreview}>
+          <div className="previewBox" onClick={(e) => e.stopPropagation()}>
+            <img
+              key={currentIndex} // triggers animation
+              src={images[currentIndex]}
+              alt="Preview"
+              className="previewImg"
+            />
+
+            {/* Navigation Arrows */}
+            <button className="navBtn prevBtn" onClick={prevImage}>❮</button>
+            <button className="navBtn nextBtn" onClick={nextImage}>❯</button>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

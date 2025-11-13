@@ -10,6 +10,15 @@
   overflow: hidden;
 }
 
+@media (max-width: 576px) {
+  .learningline {
+    width: 250px;         /* smaller width for mobile */
+    height: 3px;          /* slightly thinner */
+    margin: 8px auto 0;   /* center it nicely */
+  }
+}
+
+
 /* Optional: Animated Shine Effect */
 .learningline::after {
   content: "";
