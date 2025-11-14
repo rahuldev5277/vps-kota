@@ -6,11 +6,8 @@ export default function Footer() {
   return (
     <>
       <div className="mainfootersection">
-      <footer className="footer">
 
-
-      {/* Principal's Message */}
-      <div className="footer-content">
+        {/* Principal's Message */}
         <div className="principal-card">
           <img src="./assets/principal.webp" alt="Principal" className="principal-img" />
           <div className="principal-text">
@@ -25,35 +22,39 @@ export default function Footer() {
             </p>
           </div>
         </div>
-      </div>
 
-       {/* left logo Section */}
-       <div className="footerlogo">
-        <div className="footerimg">
-          <img src="./assets/logo.png"></img>
-        </div>
-        <h2>Vidyashram Public School</h2>
-       </div>
+        {/* Footer Row */}
+        <div className="footer-row">
 
-       {/* Right Info Section */}
-        <div className="footer-info">
-          <p>💅 Vidya Vihar, Naya Nohra, Baran Road, Kota.</p>
-          <p>📧 info@vpskota.co.in</p>
-          <p>📞 7340065179, 7340065179</p>
-
-          <div className="social-links">
-            <a href="#"><FaFacebookF /></a>
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaLinkedinIn /></a>
-            <a href="#"><FaYoutube /></a>
+          {/* Left Logo Section */}
+          <div className="footerlogo">
+            <div className="footerimg">
+              <img src="./assets/logo.png" alt="School Logo" />
+            </div>
+            <h2>Vidyashram Public School</h2>
           </div>
+
+          {/* Right Info Section */}
+          <div className="footer-info">
+            <p>💅 Vidya Vihar, Naya Nohra, Baran Road, Kota.</p>
+            <p>📧 info@vpskota.co.in</p>
+            <p>📞 7340065179, 7340065179</p>
+
+            <div className="social-links">
+              <a href="#"><FaFacebookF /></a>
+              <a href="#"><FaInstagram /></a>
+              <a href="#"><FaLinkedinIn /></a>
+              <a href="#"><FaYoutube /></a>
+            </div>
+          </div>
+
         </div>
 
-      {/* Copyright */}
-      <div className="footer-bottom">
-        <p>© 2025 Vidyashram Public School, Kota — All Rights Reserved</p>
-      </div>
-    </footer>
+        {/* Copyright */}
+        <div className="footer-bottom">
+          <p>© 2025 Vidyashram Public School, Kota — All Rights Reserved</p>
+        </div>
+
       </div>
     </>
   );
