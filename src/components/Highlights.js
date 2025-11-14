@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./Highlights.css";
 
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Highlights() {
   // === Countdown Logic ===
   const targetDate = new Date("2026-03-01T00:00:00").getTime();
@@ -33,58 +37,63 @@ export default function Highlights() {
 
   // === Highlights Data ===
   const highlights = [
-    { icon: "🏫", number: 35, text: "Years of Glorious Legacy" },
-    { icon: "🎓", number: 10000, text: "Proud Alumni" },
-    { icon: "🏆", number: 10000, text: "Students" },
-    { icon: "🏠", number: 10000, text: "Teachers" },
+    { icons: "🏫", number: 35, text: "Years of Glorious Legacy" },
+    { icons: "🎓", number: 10000, text: "Proud Alumni" },
+    { icons: "🏆", number: 10000, text: "Students" },
+    { icons: "🏠", number: 10000, text: "Teachers" },
   ];
 
-  // === Animated Counter Hook ===
   const [counts, setCounts] = useState(highlights.map(() => 0));
 
+  // === GSAP Counter Animation (FIXED) ===
   useEffect(() => {
-    const duration = 2000; // animation duration (ms)
-    const startTime = performance.now();
+    const counterObjects = [];
 
-    function animate(time) {
-      const progress = Math.min((time - startTime) / duration, 1);
+    highlights.forEach((item, index) => {
+      const obj = { value: 0 };
+      counterObjects.push(obj);
 
-      const newCounts = highlights.map((item, i) =>
-        Math.floor(item.number * progress)
-      );
+      gsap.to(obj, {
+        value: item.number,
+        duration: 2,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".highlights-section",
+          start: "top 60%",
+          once: true,
+        },
+        onUpdate: () => {
+          setCounts((prev) => {
+            const updated = [...prev];
+            updated[index] = Math.floor(obj.value);
+            return updated;
+          });
+        },
+      });
+    });
 
-      setCounts(newCounts);
-
-      if (progress < 1) requestAnimationFrame(animate);
-    }
-
-    requestAnimationFrame(animate);
-  }, []); // run once on mount
+    ScrollTrigger.refresh(); // Important
+  }, []);
 
   return (
-    <section className="highlights-section"  style={{ backgroundImage: "url('/assets/bg-2.jpg')" }}>
+    <section
+      className="highlights-section"
+      style={{ backgroundImage: "url('/assets/bg-2.jpg')" }}
+    >
       <hr className="hr" />
       <h2>Our Highlights</h2>
 
       <div className="highlights-container">
         {highlights.map((item, i) => (
           <div key={i} className="highlight-card">
-            <span className="icon">{item.icon}</span>
-            <h3 className="number">
-              {counts[i].toLocaleString()}+
-            </h3>
+            <span className="icons">{item.icons}</span>
+            <h3 className="number">{counts[i].toLocaleString()}+</h3>
             <p>{item.text}</p>
           </div>
         ))}
       </div>
 
       <hr className="hr" />
-      {/* <div className="countdown">
-        <h4>Countdown to Event:</h4>
-        <p>
-          {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
-        </p>
-      </div> */}
     </section>
   );
 }

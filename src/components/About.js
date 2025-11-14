@@ -25,7 +25,7 @@ export default function About() {
     gsap.from(".division_2 .rounded-2xl", {
       y: 100,
       opacity: 0,
-      duration: 1.5,
+      duration: 1,
       ease: "power3.out",
       scrollTrigger: {
         trigger: "#about",

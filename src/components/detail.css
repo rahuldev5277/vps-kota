@@ -340,3 +340,88 @@ h1, h2, h3, h4, h5, h6{
 .link-tag:hover{
     color:var(--primary);
 }
+
+
+
+/* ================================
+   RESPONSIVE BELOW 360PX
+   ================================ */
+@media (max-width: 360px) {
+
+  .division_4 {
+    padding-top: 50px;
+  }
+
+  /* Title */
+  .division_4 .title_header {
+    width: 90%;
+  }
+
+  .division_4 .title_header p {
+    font-size: 0.8rem;
+  }
+
+  /* Cards wrapper */
+  .division_4 .cards {
+    padding: 10px;
+  }
+
+  /* Remove floating balls (too big for 360px) */
+  .division_4 .cards:before,
+  .division_4 .cards:after,
+  .ball {
+    display: none;
+  }
+
+  /* Figures (gallery items) */
+  .division_4 .cards figure {
+    height: 45vh;                /* smaller height */
+    margin: 10px 0;              /* full width stack */
+    border-radius: 40px;         /* reduce rounded shape */
+  }
+
+  /* Reduce hover effect intensity */
+  .division_4 .cards figure:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+  }
+
+  /* Image smooth scaling */
+  .division_4 .cards figure img {
+    transition: transform 0.6s ease;
+  }
+
+  .division_4 .cards figure:hover img {
+    transform: scale(1.1);
+  }
+
+  /* Remove pushed-down effect for center items */
+  .division_4 .cards figure:nth-child(2),
+  .division_4 .cards figure:nth-child(3) {
+    top: 0;
+  }
+
+  /* Background pattern inside cards */
+  .division_4 .cards section {
+    background-size: 110% auto;
+  }
+
+  /* Global text made smaller */
+  p,
+  a,
+  .btn {
+    font-size: 13px;
+  }
+
+  .big {
+    font-size: 2.5em;
+  }
+
+  .medium {
+    font-size: 1.5em;
+  }
+
+  .small {
+    font-size: 1em;
+  }
+}

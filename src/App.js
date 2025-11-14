@@ -10,6 +10,8 @@ import Detail from "./components/Detail";
 import ProgramsSection from "./components/ProgramsSection";
 import Highlights from "./components/Highlights";
 import TestimonialSlider from "./components/TestimonialSlider";
+import Admission from "./components/Admission";
+
 
 
 function App() {
@@ -25,6 +27,7 @@ function App() {
     <Highlights/>
     <Infrastructure/>
     <TestimonialSlider/>
+    <Admission/>
     <Detail/>
     <Footer/>
 
