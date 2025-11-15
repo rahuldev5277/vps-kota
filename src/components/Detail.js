@@ -37,6 +37,7 @@ export default function Detail() {
 
     <div className="title_header">
     <h2 className="title medium">We promise best future for your kids</h2>
+    <div className='detailline'></div>
     <p>At Vidyashram Public School, we believe that meaningful learning goes beyond books and layouts — our focus is on creating engaging and thoughtful experiences that inspire every student.</p>
     </div>
 

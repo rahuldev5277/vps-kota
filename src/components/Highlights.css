@@ -25,9 +25,51 @@
 .highlights-section h2 {
   position: relative;
   font-size: 2.5rem;
-  margin-bottom: 1rem;
   z-index: 1;
+  top: -50;
 }
+
+
+/* Decorative Line */
+.highlightline {
+  width: 400px;
+  height: 4px;
+  background-color: #ee4500; /* Accent color (you can change) */
+  margin: 5px auto 0;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  top: -50;
+}
+
+/* Optional: Animated Shine Effect */
+.highlightline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+
+
 
 .highlights-container {
   position: relative;
@@ -76,5 +118,46 @@
   .highlights-container {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+/* === Extra Responsive for 360px Screens === */
+@media (max-width: 360px) {
+
+  .highlights-section {
+    padding: 3rem 1.2rem;
+  }
+
+  .highlights-section h2 {
+    font-size: 1.8rem;
+    top: -20px;
+  }
+
+  .highlightline {
+    width: 200px;
+    height: 3px;
+    top: -20px;
+  }
+
+  .highlights-container {
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .highlight-card {
+    flex: 0 0 100%;
+    max-width: 260px;
+  }
+
+  .icons {
+    font-size: 35px !important;
+  }
+
+  .number {
+    font-size: 1.8rem;
+  }
+
+  .highlight-card p {
+    font-size: 0.9rem;
   }
 }

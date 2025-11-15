@@ -8,24 +8,24 @@ gsap.registerPlugin(ScrollTrigger);
 
 const programs = [
   {
-    title: "Pre",
+    title: "Pre-Primary",
     description:
-      "The program is designed around play and caters to the development of Physical and Socio-Emotional Skills...",
-    image: "/assets/about.webp",
+      "After registration, there will be no entrance test and interview for admission in Nursery, class L.K.G., and class H.K.G.",
+    image: "/assets/kidsimg.jpg",
     bgColor: "#ee4500",
   },
   {
     title: "Primary",
     description:
-      "The program is designed to give children a strong foundation of inquiry-based learning through play...",
+      "After registration, there will be an entrance test and interview for the students seeking admissions in class I to class IX.",
     image: "/assets/geographylab.webp",
     bgColor: "#f5ab35",
   },
   {
     title: "Middle & Senior",
     description:
-      "The program is infused with activities that help children in foundational literacy and numeracy...",
-    image: "/assets/arts.webp",
+      "After registration, admission in classes X & XI is as per the rules and guidelines of C.B.S.E. subject to the availability of seats.",
+    image: "/assets/physicslab.webp",
     bgColor: "#3399ff",
   },
 ];
@@ -71,7 +71,7 @@ export default function ProgramsSection() {
   return (
     <>
     <section ref={sectionRef} className="programs-section">
-    <h2 className="section-title">Our Early <span>Learning</span> Programs</h2>
+    <h2 className="section-title">Our  <span>Learning</span> Programs</h2>
     <div className="learningline"></div>
     <p className="section-subtitle">Carefully designed programs to nurture every stage of your child’s growth.</p>
 

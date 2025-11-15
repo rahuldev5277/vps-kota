@@ -63,7 +63,7 @@ export default function About() {
       {/* Right image */}
   
         <div className="rounded-2xl">
-          <img className="rounded" src="/assets/about.webp" alt="About" />
+          <img className="rounded" src="/assets/bulding2.jpg" alt="About" />
         </div>
     </section>
   );

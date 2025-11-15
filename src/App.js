@@ -11,6 +11,7 @@ import ProgramsSection from "./components/ProgramsSection";
 import Highlights from "./components/Highlights";
 import TestimonialSlider from "./components/TestimonialSlider";
 import Admission from "./components/Admission";
+import Form from "./components/Form";
 
 
 
@@ -22,14 +23,16 @@ function App() {
     <Navbar/>
     <Header/>
     <About/>
+    <Admission/>
     <ProgramsSection/>
     {/* <Events/> */}
     <Highlights/>
     <Infrastructure/>
     <TestimonialSlider/>
-    <Admission/>
+    
     <Detail/>
     <Footer/>
+    {/* <Form/> */}
 
   </body>
 

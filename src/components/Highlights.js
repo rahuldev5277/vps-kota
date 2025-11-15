@@ -37,10 +37,10 @@ export default function Highlights() {
 
   // === Highlights Data ===
   const highlights = [
-    { icons: "🏫", number: 35, text: "Years of Glorious Legacy" },
-    { icons: "🎓", number: 10000, text: "Proud Alumni" },
-    { icons: "🏆", number: 10000, text: "Students" },
-    { icons: "🏠", number: 10000, text: "Teachers" },
+    { icons: "🏫", number: 21, text: "Years of Glorious Legacy" },
+    { icons: "🎓", number: 500, text: "Proud Alumni" },
+    { icons: "🏆", number: 1000, text: "Students" },
+    { icons: "🏠", number: 50, text: "Teachers" },
   ];
 
   const [counts, setCounts] = useState(highlights.map(() => 0));
@@ -82,6 +82,7 @@ export default function Highlights() {
     >
       <hr className="hr" />
       <h2>Our Highlights</h2>
+      <div className="highlightline"></div>
 
       <div className="highlights-container">
         {highlights.map((item, i) => (

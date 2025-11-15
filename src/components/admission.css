@@ -6,6 +6,7 @@
   padding: 60px 0;
   background: #102552; 
   text-align: center;
+  margin-top: 100px;
 }
 
 /* =======================
@@ -76,37 +77,33 @@
    CARDS
 ========================= */
 .admission_card {
-  background: #f7f6f6;
-  width: 220px;
-  height: 250px;
-  padding: 25px;
-  border-radius: 22px;
+  width: 260px;
+  height: 300px;
+  padding: 20px;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  text-align: left;
   text-align: center;
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.12);
-  transition: 0.3s ease;
 }
 
-.admission_card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.18);
-}
-
-/* Icon */
 .admission_icon {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 15px;
-  margin-left: 46px;
-  margin-top: 20px;
+  width: 50px;
+  margin-left: 80px;
+  margin-top: 30px;
 }
 
-/* Card Title */
-.admission_card p {
+.admission_card h2 {
   font-size: 18px;
-  font-weight: 600;
-  color: #222;
-  margin-top: 40px;
-  line-height: 1.3;
+  margin-bottom: 8px;
+  font-weight: 700;
+  margin-top: 50px;
+}
+
+.admission_desc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
 }
 
 /* =======================

@@ -32,13 +32,21 @@
 
 .section1heading h1 {
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
-  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 10);
 }
 
 .section1heading em {
-  color: #3399ff;
+  color: #f43333d3;
+  font-weight: 800;
+}
+
+.section1heading span{
+   font-size: 2.5rem;
+   font-weight: 500;
+   color: #ffffff;
+   
 }
 
 /* ==== CONTACT FORM ==== */
@@ -146,7 +154,7 @@
   transition: all 0.4s ease;
   min-width: 300px;
   max-width: 360px;
-  padding: 0 10px 0 10px; /* top, right, bottom, left */
+  padding: 20px 10px; /* top, right, bottom, left */
 }
 
 .section1boxs > div:hover {
@@ -228,21 +236,23 @@
     flex-direction: row;
     margin-top: -30px;   
     position: relative;   
-    z-index: 10;  
+    z-index: 10; 
   }
 
   .section1boxs > div {
     margin-top: 10px;
     max-width: 350px;
     min-width: 240px;
+  
+  
   }
 
   .section1boxs h2 {
-    font-size: 1rem;
+    font-size: 0.90rem;
   }
 
   .section1boxs p {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 }
 

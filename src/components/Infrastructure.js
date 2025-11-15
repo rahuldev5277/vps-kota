@@ -41,15 +41,16 @@ const Infrastructure = () => {
     <>
       <div className="gallerymainsection">
         <div className="gallertitle">
-          <h1>Gallery</h1>
+          <h1>Activity</h1>
           <div className="galleryline"></div>
         </div>
 
         <div className="diamondgallerysection">
           <div className="diamond-scroll-vertical">
-
+            <div className="infraheading"><h2>Sports</h2></div>
             {/* FIRST CONTAINER */}
             <div className="firstcontainer">
+           
               {images.map((img, i) => (
                 <div className="diamond-gallery" key={i}>
                   <div
@@ -62,8 +63,10 @@ const Infrastructure = () => {
               ))}
             </div>
 
+            <div className="infraheading"><h2>Cultural</h2></div>
             {/* SECOND CONTAINER */}
             <div className="firstcontainer">
+            
               {images.map((img, i) => (
                 <div className="diamond-gallery" key={`2-${i}`}>
                   <div

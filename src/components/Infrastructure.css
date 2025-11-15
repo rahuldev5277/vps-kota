@@ -16,10 +16,9 @@
 }
 
 .gallertitle h1 {
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   color: #010101;
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 2px;
 }
 
@@ -86,7 +85,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 100px;
+  gap: 50px;
+  margin-top: 80px;
 }
 
 /* ==== FIRST SECTION CONTAINER ==== */
@@ -98,6 +98,24 @@
   gap: 100px;
   padding: 10px 0;
 }
+
+
+/* Infra Heading */
+.infraheading {
+  width: 100%;
+  text-align: center;
+
+}
+
+.infraheading h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #223e8b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(135, 206, 235, 0.8); /* skyblue shadow */
+}
+
 
 /* ==== DIAMOND WRAPPER ==== */
 .diamond-gallery {
@@ -223,8 +241,6 @@
 
 
 
-
-
 /* ========================= */
 /*     RESPONSIVE DESIGN     */
 /* ========================= */
@@ -295,9 +311,10 @@
 }
 
 
-
 /* For very small devices (<=400px) */
 @media (max-width: 400px) {
+
+  /* Diamond size already added by you */
   .diamond {
     width: 100px;
     height: 100px;
@@ -310,4 +327,20 @@
   .galleryline {
     width: 120px;
   }
+
+  /* ==== NAV BUTTONS FOR SMALL SCREENS ==== */
+  .navBtn {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  .prevBtn {
+    left: 10px;    /* move inside */
+  }
+
+  .nextBtn {
+    right: 10px;   /* move inside */
+  }
+
 }

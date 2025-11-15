@@ -49,12 +49,10 @@ const testimonials = [
 const TestimonialSlider = () => {
   return (
     <div className="w-full flex flex-col items-center pt-10 bg-white px-0 md:px-36">
-      {/* <h2 className="text-3xl font-bold text-center text-indigo-900">
-        Testimonials
-      </h2> */}
+     
       <div className="flex justify-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#2c2087] mb-4 border-b-[3px] border-[#2c2087] py-1">
-          What Our Students Say
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#060606] mb-4 border-b-[4px] border-[#ee4500] py-1">
+          What Our Parents Say
         </h2>
       </div>
       <p className="mt-2 text-center text-[#0b0914] text-base md:text-3xl py-2 px-2 md:px-8 border-2 rounded-3xl border-[#0b0914] inline-block font-[500]">

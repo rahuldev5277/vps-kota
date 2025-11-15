@@ -27,12 +27,13 @@
   display: flex;
   gap: 25px;
   align-items: center;
+  margin-right: 50px;
 }
 
 .contact_item {
   display: flex;
   align-items: center;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   color: #000;
   text-decoration: none;
@@ -40,8 +41,8 @@
 
 .icon {
   margin-right: 8px;
-  margin-top: 13px;
-  font-size: 18px !important;
+  margin-top: 2px;
+  font-size: 22px !important;
   color: #e42323 !important; 
 }
 
@@ -61,35 +62,38 @@
 }
 
 
+
 /* ================= MEDIA QUERY (360px) ================= */
 @media (max-width: 360px) {
 
   .navbar {
+    display: flex;
     flex-direction: row;
-    padding: 0;
+    padding: 10px;
     padding-left: 10px;
-    gap: 5px;
+    gap: 7px;
+    
+
   }
 
   .logo_section {
-    max-width: 200px;
+    max-width: 130px;
+    
   }
 
   .logo img {
     max-width: 200px;
   }
 .contact_section {
-    flex-direction: row;
-    gap: 0;
-    padding-left: 15px;
+    margin-right: 0;
   }
 
   .contact_item {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .icon {
-    font-size: 17px !important;     
+    font-size: 15px !important;     
     color: #e42323 !important;  
   }
 }
