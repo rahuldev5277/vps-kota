@@ -121,6 +121,55 @@
   }
 }
 
+
+/* ===========================
+   RESPONSIVE FOR 500PX
+   =========================== */
+@media (max-width: 500px) {
+
+  /* ===== Highlights Section Title ===== */
+  .highlights-section h2 {
+    font-size: 1.6rem;
+    top: -20px;
+  }
+
+  /* ===== Decorative Line ===== */
+  .highlightline {
+    width: 180px;
+    height: 3px;
+    top: -20px;
+  }
+
+  /* ===== Container Adjustments ===== */
+  .highlights-container {
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  /* ===== Card Adjustments ===== */
+  .highlight-card {
+    flex: 0 0 45%; /* 2 cards per row */
+    text-align: center;
+  }
+
+  .icons {
+    font-size: 32px !important;
+    margin-bottom: 0.3rem;
+  }
+
+  .number {
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .highlight-card p {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+}
+
+
 /* === Extra Responsive for 360px Screens === */
 @media (max-width: 360px) {
 

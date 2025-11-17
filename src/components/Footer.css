@@ -225,6 +225,90 @@
 }
 
 
+@media (max-width: 500px) {
+
+  .mainfootersection {
+    padding-top: 60px;
+    padding-bottom: 25px;
+  }
+
+  /* Principal card */
+  .principal-card {
+    max-width: 95%;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .principal-img {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 12px auto;
+  }
+
+  .principal-text h3 {
+    font-size: 1.05rem;
+  }
+
+  .principal-text p {
+    font-size: 0.8rem;
+  }
+
+  /* Footer row */
+  .footer-row {
+    max-width: 95%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+  }
+
+  /* Left logo section */
+  .footerlogo {
+    width: 85%;
+    padding: 10px;
+    margin-top: 170px;
+    text-align: start;
+  }
+
+  .footerimg {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+  }
+
+  .footerlogo h2 {
+    font-size: 15px;
+  }
+
+  /* Footer info */
+  .footer-info {
+    width: 100%;
+    padding: 15px 0;
+    padding-left: 30px;
+    text-align: start;
+  }
+
+  .footer-info p {
+    font-size: 0.85rem;
+  }
+
+  /* Social icons */
+  .social-links a {
+    width: 30px;
+    height: 30px;
+    font-size: 0.75rem;
+  }
+
+  /* Copyright */
+  .footer-bottom {
+    font-size: 0.75rem;
+    padding: 8px 0;
+  }
+}
+
+
+
+
 
 /* ================================
    RESPONSIVE BELOW 360PX (VERY SMALL)

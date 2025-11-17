@@ -62,6 +62,30 @@
 }
 
 
+@media (max-width: 500px) {
+
+
+  /* Logo smaller */
+  .logo img {
+    max-width: 80px;
+  }
+
+  .contact_section{
+     margin-left: 30px;
+  }
+
+  /* Contact text smaller */
+  .contact_item {
+    font-size: 12px;
+  }
+
+  /* Icons smaller */
+  .icon {
+    font-size: 14px;
+  }
+}
+
+
 
 /* ================= MEDIA QUERY (360px) ================= */
 @media (max-width: 360px) {

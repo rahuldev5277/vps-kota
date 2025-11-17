@@ -381,12 +381,104 @@ h1, h2, h3, h4, h5, h6{
 
 
 
+
+/* ============================
+   RESPONSIVE — MAX WIDTH 500px
+   ============================ */
+@media (max-width: 500px) {
+
+  /* Reduce top padding */
+  .division_4 {
+    padding-top: 60px;
+  }
+
+  /* Title center & smaller width */
+  .division_4 .title_header {
+    width: 85%;
+  }
+
+  .division_4 .title_header p {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+
+  /* Decorative line */
+  .detailline {
+    width: 345px;
+    height: 3px;
+  }
+
+  /* Cards container */
+  .division_4 .cards {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  /* Remove animated circles & dots */
+  .division_4 .cards:before,
+  .division_4 .cards:after,
+  .ball {
+    display: none !important;
+  }
+
+  /* Gallery figure size */
+  .division_4 .cards figure {
+    height: 45vh;    /* reduced height */
+    width: 100%;
+    margin: 0;
+    border-radius: 40px;
+    top: 0 !important;
+  }
+
+  /* Image zoom */
+  .division_4 .cards figure img {
+    transition: transform 0.6s ease;
+  }
+
+  .division_4 .cards figure:hover img {
+    transform: scale(1.08);
+  }
+
+  /* Remove offset for 2nd & 3rd image */
+  .division_4 .cards figure:nth-child(2),
+  .division_4 .cards figure:nth-child(3) {
+    top: 0 !important;
+  }
+
+  /* Background line resize */
+  .division_4 .cards section {
+    background-size: 130% auto;
+  }
+
+  /* Global text adjustments */
+  .big {
+    font-size: 2.6rem;
+  }
+
+  .medium {
+    font-size: 1.6rem;
+  }
+
+  .small {
+    font-size: 1rem;
+  }
+
+  p,
+  a,
+  .btn {
+    font-size: 14px;
+    line-height: 1.6rem;
+  }
+}
+
+
+
 /* ================================
    RESPONSIVE BELOW 360PX
    ================================ */
-/* ================================
-   PERFECT RESPONSIVE FOR 360PX
-   ================================ */
+
 @media (max-width: 360px) {
 
   .division_4 {

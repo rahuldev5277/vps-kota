@@ -186,6 +186,40 @@
   }
 }
 
+
+@media (max-width: 500px) {
+
+  .admission_container {
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .admission_card {
+    width: 75%;
+    height: auto;     /* Better for bigger screens */
+    padding: 15px;
+  }
+
+  .admission_icon {
+    width: 75px;
+    height: 75px;
+  }
+
+  .admission_card p {
+    font-size: 15px;
+    margin-top: 12px;
+  }
+
+  .admission_section h1 {
+    font-size: 26px;
+  }
+
+  .admissionline {
+    width: 260px;
+  }
+}
+
+
 /* =======================
    SMALL PHONES — 360px
 ========================= */
