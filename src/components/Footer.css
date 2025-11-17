@@ -47,6 +47,7 @@
   font-size: 0.95rem;
   color: #f2f2f2;
   line-height: 1.5;
+
 }
 
 /* ==== FOOTER ROW (logo + info section) ==== */
@@ -107,6 +108,7 @@
   font-size: 0.95rem;
   color: #ddd;
   margin: 0;
+  font-family: sans-serif !important;
 }
 
 /* ==== SOCIAL ICONS ==== */
@@ -355,6 +357,7 @@
   .footerlogo {
     width: 80%;
     margin-top: 10px;
+    margin-left: -140px;
   }
 
   .footerimg {
@@ -371,7 +374,7 @@
   /* Info section */
   .footer-info {
     width: 100%;
-    margin-left: 10px;
+    margin-left: -60px;
   }
 
   .footer-info p {

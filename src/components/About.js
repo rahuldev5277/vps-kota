@@ -41,7 +41,7 @@ export default function About() {
       <div className="about_section">
         <div className="about_image_box">
           <img 
-            src="./assets/bulding3.jpg" 
+            src="./assets/socity.webp" 
             alt="About" 
             className="about_image"
           />
@@ -49,7 +49,7 @@ export default function About() {
 
         <div className="about_text_box">
           <h3 className="about_small_title">About Our</h3>
-          <h1 className="about_big_title">society</h1>
+          <h1 className="about_big_title">Society</h1>
 
           <p className="about_paragraph">
               At <strong>Vidyashram Public School</strong>, we believe in nurturing

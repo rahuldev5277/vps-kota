@@ -28,12 +28,14 @@
   gap: 25px;
   align-items: center;
   margin-right: 50px;
+ 
 }
 
 .contact_item {
   display: flex;
   align-items: center;
   font-size: 18px;
+  font-family: "Poppins", sans-serif !important; 
   font-weight: 500;
   color: #000;
   text-decoration: none;
@@ -71,12 +73,14 @@
   }
 
   .contact_section{
-     margin-left: 30px;
+    margin: 0;
   }
-
   /* Contact text smaller */
   .contact_item {
+    padding: 0;
+    margin: 0;
     font-size: 12px;
+    margin-left:25px;
   }
 
   /* Icons smaller */

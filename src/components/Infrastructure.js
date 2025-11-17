@@ -2,29 +2,41 @@ import React, { useState, useEffect } from "react";
 import "./Infrastructure.css";
 
 const Infrastructure = () => {
-  // All images in your gallery
-  const images = [
-    "./assets/1.webp",
-    "./assets/2.webp",
-    "./assets/3.webp",
-    "./assets/4.webp",
-    "./assets/3.webp",
+  // Separate arrays for Sports and Cultural
+  const sportsImages = [
+    "./assets/activity1.webp",
+    "./assets/activity2.webp",
+    "./assets/activity3.webp",
+    "./assets/activity4.webp",
+    "./assets/activity5.webp",
+
   ];
+
+  const culturalImages = [
+    "./assets/cultural1.webp",
+    "./assets/cultural2.webp",
+    "./assets/cultural3.webp",
+    "./assets/cultural4.webp",
+    "./assets/activity5.webp",
+    
+  ];
+
+  // Merge arrays for preview carousel
+  const allImages = [...sportsImages, ...culturalImages];
 
   const [currentIndex, setCurrentIndex] = useState(null);
 
-  // Handle next and previous
+  // Handle next and previous in preview
   const nextImage = (e) => {
     e.stopPropagation();
-    setCurrentIndex((prev) => (prev + 1) % images.length);
+    setCurrentIndex((prev) => (prev + 1) % allImages.length);
   };
 
   const prevImage = (e) => {
     e.stopPropagation();
-    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+    setCurrentIndex((prev) => (prev - 1 + allImages.length) % allImages.length);
   };
 
-  // Close preview on outside click or ESC key
   const closePreview = () => setCurrentIndex(null);
 
   useEffect(() => {
@@ -35,46 +47,47 @@ const Infrastructure = () => {
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-  });
+  }, []);
 
   return (
     <>
       <div className="gallerymainsection">
-         <div className="gallertitle">
+        <div className="gallertitle">
           <h1>Activity</h1>
           <div className="galleryline"></div>
         </div>
 
         <div className="diamondgallerysection">
-          
           <div className="diamond-scroll-vertical">
-            <div className="infraheading"><h2>Sports</h2></div>
-            {/* FIRST CONTAINER */}
+            {/* SPORTS SECTION */}
+            <div className="infraheading">
+              <h2>Sports</h2>
+            </div>
             <div className="firstcontainer">
-           
-              {images.map((img, i) => (
-                <div className="diamond-gallery" key={i}>
+              {sportsImages.map((img, i) => (
+                <div className="diamond-gallery" key={`sports-${i}`}>
                   <div
                     className="diamond"
                     onClick={() => setCurrentIndex(i)}
                   >
-                    <img src={img} alt={`img${i + 1}`} />
+                    <img src={img} alt={`Sports ${i + 1}`} />
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="infraheading"><h2>Cultural</h2></div>
-            {/* SECOND CONTAINER */}
+            {/* CULTURAL SECTION */}
+            <div className="infraheading">
+              <h2>Cultural</h2>
+            </div>
             <div className="firstcontainer">
-            
-              {images.map((img, i) => (
-                <div className="diamond-gallery" key={`2-${i}`}>
+              {culturalImages.map((img, i) => (
+                <div className="diamond-gallery" key={`cultural-${i}`}>
                   <div
                     className="diamond"
-                    onClick={() => setCurrentIndex(i)}
+                    onClick={() => setCurrentIndex(i + sportsImages.length)}
                   >
-                    <img src={img} alt={`img${i + 1}`} />
+                    <img src={img} alt={`Cultural ${i + 1}`} />
                   </div>
                 </div>
               ))}
@@ -83,18 +96,16 @@ const Infrastructure = () => {
         </div>
       </div>
 
-      {/* ==== SWEET PREVIEW CAROUSEL ==== */}
+      {/* ==== PREVIEW CAROUSEL ==== */}
       {currentIndex !== null && (
         <div className="previewOverlay" onClick={closePreview}>
           <div className="previewBox" onClick={(e) => e.stopPropagation()}>
             <img
               key={currentIndex} // triggers animation
-              src={images[currentIndex]}
+              src={allImages[currentIndex]}
               alt="Preview"
               className="previewImg"
             />
-
-            {/* Navigation Arrows */}
             <button className="navBtn prevBtn" onClick={prevImage}>❮</button>
             <button className="navBtn nextBtn" onClick={nextImage}>❯</button>
           </div>

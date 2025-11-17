@@ -496,6 +496,9 @@
   }
 }
 
+
+
+
 @media (max-width: 500px) {
 
   /* Section layout */
@@ -527,7 +530,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    margin-top: 400px;
+    margin-top: 420px;
     margin-left: 20px;
     width: 100%;
     max-width: 360px;

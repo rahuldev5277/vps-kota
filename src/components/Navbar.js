@@ -22,7 +22,7 @@ export default function Navbar() {
         <div className="contact_section">
           <a href="tel:+917340065179" className="contact_item">
             <FontAwesomeIcon icon={faPhone} className="icon" />
-            +91 734 006 5179
+            +91 7340065179
           </a>
         </div>
 
