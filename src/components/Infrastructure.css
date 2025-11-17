@@ -249,7 +249,6 @@
 @media (max-width: 1200px) {
   .diamondgallerysection {
     height: auto;
-    padding: 60px 0;
   }
 
   .firstcontainer {
@@ -314,6 +313,16 @@
 /* For very small devices (<=400px) */
 @media (max-width: 400px) {
 
+
+
+  .diamond-scroll-vertical{
+    position: relative;
+    top: -100;
+  }
+
+
+ 
+
   /* Diamond size already added by you */
   .diamond {
     width: 100px;
@@ -328,6 +337,7 @@
     width: 120px;
   }
 
+ 
   /* ==== NAV BUTTONS FOR SMALL SCREENS ==== */
   .navBtn {
     width: 40px;
@@ -343,4 +353,41 @@
     right: 10px;   /* move inside */
   }
 
+}
+
+
+
+@media (max-width: 260px) {
+
+  /* ========== FIX IMAGE PREVIEW SIZE ========== */
+
+
+  .previewBox {
+    max-width: 80%;
+    max-height: 70%;    
+    padding: 6px;  
+    margin-right: 50px; 
+    border-radius: 10px;
+  }
+
+  .previewImg {
+    max-height: 60vh;   /* reduce height for tiny screens */
+    width: 100%;
+    object-fit: contain;
+  }
+
+  /* Navigation buttons inside preview */
+  .navBtn {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+
+  .prevBtn {
+    left: 4px;
+  }
+
+  .nextBtn {
+    right: 4px;
+  }
 }

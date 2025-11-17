@@ -171,3 +171,72 @@
 }
 
 
+
+@media (max-width: 260px) {
+
+  /* Learning Line */
+  .learningline {
+    width: 230px;
+    height: 3.5px;
+    margin: 5px auto 0;
+  }
+
+  /* Programs Section */
+  .programs-section {
+    padding: 40px 10px;
+  }
+
+  .section-title {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .section-subtitle {
+    font-size: 12px;
+    margin-bottom: 25px;
+  }
+
+  /* Grid Layout */
+  .programs-grid {
+    grid-template-columns: 1fr; 
+    gap: 15px;
+  }
+
+  .program-card {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  /* Title */
+  .program-title {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  .program-age {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+
+  .program-desc {
+    font-size: 11px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+  /* Image */
+  .program-image {
+    height: 130px;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .program-image img {
+    border-radius: 10px;
+  }
+
+  /* HR Line */
+  .hr {
+    margin: 1rem 0;
+  }
+}

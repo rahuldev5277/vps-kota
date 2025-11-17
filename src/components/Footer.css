@@ -3,7 +3,7 @@
   width: 100%;
   background-color: #0b1533;
   color: #fff;
-  padding-top: 120px;  /* space for principal card */
+  padding-top: 120px;  
   padding-bottom: 40px;
   display: flex;
   flex-direction: column;
@@ -88,8 +88,12 @@
   font-weight: 700;
   color: #ee4500;
   letter-spacing: 1px;
-  text-transform: uppercase;
   line-height: 1.2;
+}
+
+.footerlogo span{
+  color: white;
+  font-weight: 700;
 }
 
 /* ==== RIGHT INFO SECTION ==== */
@@ -301,5 +305,96 @@
   .footer-bottom {
     font-size: 0.7rem;
     padding: 8px 0;
+  }
+}
+
+
+
+@media (max-width: 260px) {
+
+  .mainfootersection {
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 15px;
+  }
+
+  /* Principal card */
+  .principal-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0.7rem;
+    border-radius: 14px;
+
+    /* FIX SIDE CUTTING */
+    box-sizing: border-box; 
+    margin: 0 auto; /* center the card */
+  }
+
+
+  .principal-img {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 8px auto;
+  }
+
+  .principal-text h3 {
+    font-size: 0.85rem;
+  }
+
+  .principal-text p {
+    font-size: 0.65rem;
+  }
+
+  /* Footer row full width */
+  .footer-row {
+    max-width: 100%;
+    flex-direction: column;
+    margin-top: 180px;
+    margin-left: 0;
+    padding: 0 10px;
+  }
+
+  /* Logo section */
+  .footerlogo {
+    width: 100%;
+    margin-top: 5px;
+    text-align: center;
+  }
+
+  .footerimg {
+    width: 95px;
+    height: 95px;
+    margin-left: 0;
+  }
+
+  .footerlogo h2 {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  /* Info section */
+  .footer-info {
+    width: 100%;
+    margin-left: 0;
+    text-align: start;
+    margin-top: 10px;
+  }
+
+  .footer-info p {
+    font-size: 0.75rem;
+    line-height: 1.2rem;
+  }
+
+  /* Social icons smaller */
+  .social-links a {
+    width: 24px;
+    height: 24px;
+    font-size: 0.6rem;
+  }
+
+  /* Copyright */
+  .footer-bottom {
+    font-size: 0.55rem;
+    padding: 6px 0;
   }
 }

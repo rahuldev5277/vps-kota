@@ -480,3 +480,97 @@ h1, h2, h3, h4, h5, h6{
     font-size: 0.95em;
   }
 }
+
+
+
+@media (max-width: 260px) {
+
+  .division_4 {
+    padding-top: 25px;
+  }
+
+  /* Title */
+  .division_4 .title_header {
+    width: 100%;
+    margin-bottom: 0.8rem;
+  }
+
+  .division_4 .title_header p {
+    font-size: 0.75rem;
+    line-height: 1.3rem;
+  }
+
+  /* Decorative Detail Line */
+  .detailline {
+    width: 220px;
+    height: 2.5px;
+  }
+
+  /* Cards wrapper */
+  .division_4 .cards {
+    padding: 6px;
+    gap: 15px;
+  }
+
+  /* Remove floating shapes */
+  .division_4 .cards:before,
+  .division_4 .cards:after,
+  .ball {
+    display: none !important;
+  }
+
+  /* Gallery Items */
+  .division_4 .cards figure {
+    height: 38vh;
+    width: 100%;
+    margin: 0;
+    border-radius: 22px;
+    top: 0 !important;
+  }
+
+  /* Reduce hover intensity */
+  .division_4 .cards figure:hover {
+    transform: scale(1.015);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.22);
+  }
+
+  /* Image scale */
+  .division_4 .cards figure img {
+    transition: transform 0.6s ease;
+  }
+
+  .division_4 .cards figure:hover img {
+    transform: scale(1.08);
+  }
+
+  /* Remove image row shift */
+  .division_4 .cards figure:nth-child(2),
+  .division_4 .cards figure:nth-child(3) {
+    top: 0;
+  }
+
+  /* Background decorative lines */
+  .division_4 .cards section {
+    background-size: 160% auto;
+  }
+
+  /* Global font tweaks */
+  p,
+  a,
+  .btn {
+    font-size: 11px;
+    line-height: 1.4rem;
+  }
+
+  .big {
+    font-size: 1.9em;
+  }
+
+  .medium {
+    font-size: 1.2em;
+  }
+
+  .small {
+    font-size: 0.85em;
+  }
+}

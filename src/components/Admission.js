@@ -28,22 +28,22 @@ export default function Admission() {
 
   const features = [
     {
-      img: "https://cdn-icons-png.flaticon.com/512/1828/1828817.png",
+      img: "./assets/join.gif",
       title: "REGISTER",
       desc: "Complete the registration process to get started with your school admission and manage your details easily."
     },
     {
-      img: "https://cdn-icons-png.flaticon.com/512/747/747376.png",
+      img: "./assets/user.gif",
       title: "CREATE CHILD'S PROFILE",
       desc: "Fill in the details to create your child's profile and proceed with the school admission process."
     },
     {
-      img: "https://cdn-icons-png.flaticon.com/512/2921/2921222.png",
+      img: "./assets/profile.gif",
       title: "FILL APPLICATION FORM",
       desc: "Complete the application form with accurate details to proceed with your child's admission process."
     },
     {
-      img: "https://cdn-icons-png.flaticon.com/512/1828/1828859.png",
+      img: "./assets/track-order.gif",
       title: "TRACK APPLICATION FORM",
       desc: "Monitor the status of your application form to stay updated on your child's admission progress."
     }

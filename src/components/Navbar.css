@@ -97,3 +97,38 @@
     color: #e42323 !important;  
   }
 }
+
+
+
+@media (max-width: 260px) {
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    padding-left: 8px;
+    gap: 5px;
+  }
+
+  .logo_section {
+    max-width: 100px;
+  }
+
+  .logo img {
+    max-width: 150px;
+  }
+
+  .contact_section {
+    margin-right: 0;
+  }
+
+  .contact_item {
+    font-size: 14px;
+  }
+
+  .icon {
+    font-size: 13px !important;
+    color: #e42323 !important;
+  }
+}
+

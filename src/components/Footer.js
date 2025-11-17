@@ -31,7 +31,7 @@ export default function Footer() {
             <div className="footerimg">
               <img src="./assets/logo.png" alt="School Logo" />
             </div>
-            <h2>Vidyashram Public School</h2>
+            <h2>Vidyashram <span>Public School</span></h2>
           </div>
 
           {/* Right Info Section */}

@@ -584,3 +584,90 @@
     margin: 6px auto 0;
   }
 }
+
+@media (max-width: 260px) {
+
+  /* Section layout */
+  .section1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bannerimg {
+    height: 80vh;
+  }
+
+  /* Heading */
+  .section1heading {
+    margin-top: 5px;
+    padding: 0 5px;
+    text-align: center;
+  }
+
+  .section1heading h1 {
+    font-size: 1.2rem;     /* smaller */
+    line-height: 1.1;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  /* Contact form */
+  .section1form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 360px;
+    margin-left: 20px;
+    width: 100%;
+    max-width: 220px;       /* fits 260px screens */
+  }
+
+  .section1form h2 {
+    font-size: 0.8rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.6rem;
+    padding: 5px;
+  }
+
+  .field label {
+    font-size: 0.6rem;
+  }
+
+  .contact-form button.btn {
+    font-size: 0.65rem;
+    padding: 5px 10px;
+    width: 100%;
+  }
+
+  /* Boxes section */
+  .section1boxs {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .section1boxs > div {
+    width: 95%;
+    text-align: center;
+    padding: 6px;
+  }
+
+  .section1boxs h2 {
+    font-size: 0.8rem;
+  }
+
+  .section1boxs p {
+    font-size: 0.6rem;
+  }
+
+  /* Learning line */
+  .learningline {
+    width: 150px;
+    height: 2px;
+    margin: 5px auto 0;
+  }
+}

@@ -40,12 +40,13 @@ const Infrastructure = () => {
   return (
     <>
       <div className="gallerymainsection">
-        <div className="gallertitle">
+         <div className="gallertitle">
           <h1>Activity</h1>
           <div className="galleryline"></div>
         </div>
 
         <div className="diamondgallerysection">
+          
           <div className="diamond-scroll-vertical">
             <div className="infraheading"><h2>Sports</h2></div>
             {/* FIRST CONTAINER */}

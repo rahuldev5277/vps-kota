@@ -11,37 +11,37 @@ import "./Testimonials.css"
 const testimonials = [
   {
     name: 'Rahul Sharma',
-    role: 'MBA Graduate',
+    role: 'Busness Man',
     text: 'The university provided a platform for me to enhance my leadership skills and gain practical business knowledge. The faculty support was incredible!',
-    image: 'assets/testimonial/1.png', // Replace with actual image URL
+    image: 'assets/testimonial/1.avif', 
     rating: 5,
   },
   {
     name: 'Neha Verma',
-    role: 'Computer Science Student',
+    role: 'Teacher',
     text: 'An amazing learning environment with excellent faculty and resources. The practical exposure helped me land my dream job in tech!',
-    image: 'assets/testimonial/2.png',
+    image: 'assets/testimonial/2.webp',
     rating: 4,
   },
   {
     name: 'Arjun Mehta',
-    role: 'Engineering Graduate',
+    role: 'Software Engineer',
     text: 'The hands-on projects and internship opportunities at this university played a crucial role in my career growth. I highly recommend it!',
-    image: 'assets/testimonial/4.png',
+    image: 'assets/testimonial/3.jpg',
     rating: 5,
   },
   {
-    name: 'Priya Nair',
-    role: 'Marketing Student',
+    name: 'Prakesh sharma',
+    role: 'Human Resourse',
     text: 'The university not only helped me academically but also gave me great industry exposure through guest lectures and networking events.',
-    image: 'assets/testimonial/3.png',
+    image: 'assets/testimonial/4.jpg',
     rating: 5,
   },
   {
     name: 'Aman Gupta',
-    role: 'Finance Graduate',
+    role: 'Bank Manager',
     text: 'An outstanding experience with top-notch faculty, great campus life, and excellent placement opportunities. Best decision I ever made!',
-    image: 'assets/testimonial/5.png',
+    image: 'assets/testimonial/5.jpg',
     rating: 4,
   },
 ];
