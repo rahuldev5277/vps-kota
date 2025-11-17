@@ -1,13 +1,11 @@
-import React from 'react';
+// import React from 'react';
 import "./events.css";
-import gsap from 'gsap';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from '@gsap/react';
+// import gsap from 'gsap';
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { useGSAP } from '@gsap/react';
 
 
 export default function Events() {
-
- 
 
   return (
     <div id='event' className="division_3">
