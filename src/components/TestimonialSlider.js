@@ -10,39 +10,39 @@ import "./Testimonials.css"
 
 const testimonials = [
   {
-    name: 'Rahul Sharma',
-    role: 'Busness Man',
-    text: 'The university provided a platform for me to enhance my leadership skills and gain practical business knowledge. The faculty support was incredible!',
-    image: 'assets/testimonial/1.avif', 
-    rating: 5,
+      name: 'Rahul Sharma',
+      role: 'Businessman',
+      text: 'Vidyashram Public School, Kota, has been instrumental in shaping my personality. The school emphasizes holistic development, combining academics, sports, and cultural activities. The teachers are supportive and inspire students to achieve excellence in every field.',
+      image: 'assets/testimonial/1.avif',
+      rating: 5
   },
   {
-    name: 'Neha Verma',
-    role: 'Teacher',
-    text: 'An amazing learning environment with excellent faculty and resources. The practical exposure helped me land my dream job in tech!',
-    image: 'assets/testimonial/2.webp',
-    rating: 4,
+      name: 'Neha Verma',
+      role: 'Teacher',
+      text: 'Teaching at Vidyashram Public School, Kota, has been a truly rewarding experience. The school fosters a collaborative environment, encourages innovative teaching methods, and supports both students and staff in achieving their full potential.',
+      image: 'assets/testimonial/2.webp',
+      rating: 5
   },
   {
-    name: 'Arjun Mehta',
-    role: 'Software Engineer',
-    text: 'The hands-on projects and internship opportunities at this university played a crucial role in my career growth. I highly recommend it!',
-    image: 'assets/testimonial/3.jpg',
-    rating: 5,
+      name: 'Arjun Mehta',
+      role: 'Alumnus',
+      text: 'Vidyashram Public School, Kota, provided me with a strong academic foundation and opportunities to explore my interests beyond the classroom. The guidance from teachers and participation in co-curricular activities helped shape my confidence and skills for the future.',
+      image: 'assets/testimonial/3.jpg',
+      rating: 5
   },
   {
-    name: 'Prakesh sharma',
-    role: 'Human Resourse',
-    text: 'The university not only helped me academically but also gave me great industry exposure through guest lectures and networking events.',
-    image: 'assets/testimonial/4.jpg',
-    rating: 5,
+      name: 'Prakesh Sharma',
+      role: 'Human Resources Professional',
+      text: 'Vidyashram Public School, Kota, helped me grow not just academically but also personally. The school encourages teamwork, leadership, and overall development, preparing students for real-world challenges with confidence.',
+      image: 'assets/testimonial/4.jpg',
+      rating: 5
   },
   {
-    name: 'Aman Gupta',
-    role: 'Bank Manager',
-    text: 'An outstanding experience with top-notch faculty, great campus life, and excellent placement opportunities. Best decision I ever made!',
-    image: 'assets/testimonial/5.jpg',
-    rating: 4,
+      name: 'Aman Gupta',
+      role: 'Bank Manager',
+      text: 'Vidyashram Public School, Kota, provided an excellent learning environment with dedicated teachers and a vibrant campus. The school’s focus on academics, sports, and cultural activities helped me develop skills that I still use in my professional life.',
+      image: 'assets/testimonial/5.jpg',
+      rating: 5
   },
 ];
 
