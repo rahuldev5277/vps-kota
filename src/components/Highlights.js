@@ -15,25 +15,25 @@ export default function Highlights() {
     seconds: 0,
   });
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const difference = targetDate - now;
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     const now = new Date().getTime();
+  //     const difference = targetDate - now;
 
-      if (difference > 0) {
-        setTimeLeft({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / (1000 * 60)) % 60),
-          seconds: Math.floor((difference / 1000) % 60),
-        });
-      } else {
-        clearInterval(timer);
-      }
-    }, 1000);
+  //     if (difference > 0) {
+  //       setTimeLeft({
+  //         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+  //         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+  //         minutes: Math.floor((difference / (1000 * 60)) % 60),
+  //         seconds: Math.floor((difference / 1000) % 60),
+  //       });
+  //     } else {
+  //       clearInterval(timer);
+  //     }
+  //   }, 1000);
 
-    return () => clearInterval(timer);
-  }, [targetDate]);
+  //   return () => clearInterval(timer);
+  // }, [targetDate]);
 
   // === Highlights Data ===
   const highlights = [

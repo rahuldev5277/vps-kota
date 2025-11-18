@@ -40,12 +40,12 @@ export default function Footer() {
             <p>📧 info@vpskota.co.in</p>
             <p>📞 7340065179, 7340065179</p>
 
-            <div className="social-links">
-              <a href="#"><FaFacebookF /></a>
-              <a href="#"><FaInstagram /></a>
-              <a href="#"><FaLinkedinIn /></a>
-              <a href="#"><FaYoutube /></a>
-            </div>
+            {/* <div className="social-links">
+              <a href=""><FaFacebookF /></a>
+              <a href=""><FaInstagram /></a>
+              <a href=""><FaLinkedinIn /></a>
+              <a href=""><FaYoutube /></a>
+            </div> */}
           </div>
 
         </div>
