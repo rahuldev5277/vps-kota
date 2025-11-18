@@ -68,8 +68,24 @@ useGSAP(() =>{
 
                 <div className="field">
                 <label> Admission in Class <span className="required">*</span></label>
-                <input type="text" name="Class" placeholder="Class" />
-                </div>
+                <select name="Class" className="class-select" defaultValue="">
+                  <option value="" > Select Class </option>
+                  <option value="I">Class I</option>
+                  <option value="II">Class II</option>
+                  <option value="III">Class III</option>
+                  <option value="IV">Class IV</option>
+                  <option value="V">Class V</option>
+                  <option value="VI">Class VI</option>
+                  <option value="VII">Class VII</option>
+                  <option value="VIII">Class VIII</option>
+                  <option value="IX">Class IX</option>
+                  <option value="X">Class X</option>
+                  <option value="XI">Class XI</option>
+                  <option value="XII">Class XII</option>
+                </select>
+              </div>
+
+
               
               
               </div>

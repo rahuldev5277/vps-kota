@@ -18,8 +18,6 @@ import Admission from "./components/Admission";
 function App() {
   return (
 <>
-  <body>
-
     <Navbar/>
     <Header/>
     <About/>
@@ -29,11 +27,8 @@ function App() {
     <Highlights/>
     <Infrastructure/>
     <TestimonialSlider/>
-    
     <Detail/>
     <Footer/>
-
-  </body>
 
 	
     </>

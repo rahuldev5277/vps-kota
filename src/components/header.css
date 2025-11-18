@@ -49,7 +49,9 @@
    
 }
 
-/* ==== CONTACT FORM ==== */
+
+
+/* ==== CONTACT FORM CONTAINER ==== */
 .section1form {
   position: absolute;
   top: 48%;
@@ -59,7 +61,7 @@
   background: rgba(0, 0, 0, 0.6);
   border-radius: 12px;
   max-width: 400px;
-  max-height: auto;
+  width: 100%;
   color: #fff;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
@@ -72,7 +74,7 @@
   letter-spacing: 1px;
 }
 
-/* Fields */
+/* ==== FIELD STRUCTURE ==== */
 .field-row {
   display: flex;
   gap: 16px;
@@ -97,8 +99,11 @@
   color: red;
 }
 
+/* UNIVERSAL INPUT STYLE (input, select, textarea same look) */
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea,
+.contact-form select,
+.class-select {
   width: 100%;
   padding: 10px 15px;
   border-radius: 18px;
@@ -107,15 +112,28 @@
   background: #fffbe7;
   font-size: 1rem;
   transition: all 0.3s ease;
+  color: #000;
+  font-family: sans-serif !important;
+  cursor: pointer;
 }
 
+/* ====== REMOVE DROPDOWN ARROW ====== */
+.class-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: none;
+}
+
+/* FOCUS EFFECT */
 .contact-form input:focus,
-.contact-form textarea:focus {
+.contact-form textarea:focus,
+.contact-form select:focus {
   box-shadow: 0 0 5px #ffd700;
   background: #fff5c2;
 }
 
-/* Button */
+/* ==== BUTTON STYLE ==== */
 .contact-form button.btn {
   background-color: #ffd700;
   color: #000;
@@ -125,7 +143,7 @@
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
   width: 100%;
 }
 
@@ -133,6 +151,7 @@
   background-color: #eac37b;
   transform: translateY(-2px);
 }
+
 
 /* ==== BOX SECTION ==== */
 .section1boxs {
@@ -630,7 +649,9 @@
   }
 
   .contact-form input,
-  .contact-form textarea {
+  .contact-form textarea,
+  .contact-form select,
+.class-select {
     font-size: 0.7rem;
     padding: 6px;
   }
