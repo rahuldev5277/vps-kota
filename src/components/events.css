@@ -65,13 +65,14 @@
 .news-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 10px;
 }
 
 .card {
-  width: 350px;
-  height: 500px;
-  background: #fff;
+  width: 300px;
+  height: 400px;
+  background: #f9f0c8;
+  margin-left: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   overflow: hidden;
@@ -80,7 +81,7 @@
 
 .card img {
   width: 100%;
-  height: 300px;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -102,17 +103,16 @@
   box-shadow: 0 4px 12px rgba(160, 127, 127, 0.25);
 }
 
-
-
-
-
-
 /* Base news grid for desktop */
 .news-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columns desktop */
   gap: 20px;
 }
+
+
+
+
 
 /* Responsive: Mobile 500px */
 @media (max-width: 500px) {
@@ -121,12 +121,14 @@
   .division_3{
     margin-top: 120px;
     margin-bottom: 80px;
+    
    }
     
 
   .news-grid {
     grid-template-columns: 1fr; 
     gap: 15px;
+    
   }
 
   .card {
@@ -147,7 +149,7 @@
 
   /* Adjust line under title */
   .eventtitle .eventline {
-    width: 300px;       /* shorter on mobile */
+    width: 300px;       
     height: 4px;
     margin: 8px auto 15px;
   }
@@ -156,47 +158,66 @@
 
 
 /* Responsive: Extra small mobile 360px */
+/* ============================
+   RESPONSIVE — MAX WIDTH 360px
+   ============================ */
 @media (max-width: 360px) {
 
-
-
-  .news-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;  
-    padding: 10px;
-              
+  .division_3 {
+    margin-top: 20px;
+    margin-bottom: 40px;
   }
 
+  /* Title */
+  .eventtitle h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+  }
+
+  /* Decorative line under title */
+  .eventtitle .eventline {
+    width: 150px;     
+    height: 3px;
+  }
+
+  /* News container */
+  .news-container {
+    padding: 10px;
+  }
+
+  /* Grid becomes 1 column */
+  .news-grid {
+    grid-template-columns: 1fr; 
+    gap: 15px;
+    justify-items: center;
+  }
+
+  /* Card adjustments */
   .card {
-    height: auto;               
-    border-radius: 8px; 
-    width: 300px; 
-    margin-right: 80px;      
+    width: 90%;       
+    height: auto;      
+    margin-left: 0;    
   }
 
   .card img {
-    height: 150px;              /* smaller image for tiny screens */
+    height: 180px;     
   }
 
   .card h3 {
-    font-size: 0.95rem;         /* smaller heading */
-    margin: 8px 10px 4px;
+    font-size: 1rem;
+    margin: 8px 12px 5px;
   }
 
   .card p {
-    font-size: 0.85rem;         /* smaller text */
-    margin: 0 10px 10px;
+    font-size: 0.9rem;
+    margin: 0 12px 12px;
   }
 
-  /* Adjust line under title */
-  .eventtitle .eventline{
-    width: 300px;               
-    height: 2.5px;
-    margin: 6px auto 12px;
+  .eventtitle .eventline {
+    width: 230px;       
+    height: 4px;
+    margin: 8px auto 15px;
   }
 
-  /* Optional: reduce title size */
-  .title_header .title {
-    font-size: 1.8rem;
-  }
 }
+

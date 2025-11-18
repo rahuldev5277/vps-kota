@@ -5,47 +5,17 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
+// ✅ Move highlights OUTSIDE component → dependency warning REMOVED
+const highlights = [
+  { icons: "🏫", number: 21, text: "Years of Glorious Legacy" },
+  { icons: "🎓", number: 500, text: "Proud Alumni" },
+  { icons: "🏆", number: 1000, text: "Students" },
+  { icons: "🏠", number: 50, text: "Teachers" },
+];
+
 export default function Highlights() {
-  // === Countdown Logic ===
-  const targetDate = new Date("2026-03-01T00:00:00").getTime();
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
-
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     const now = new Date().getTime();
-  //     const difference = targetDate - now;
-
-  //     if (difference > 0) {
-  //       setTimeLeft({
-  //         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-  //         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-  //         minutes: Math.floor((difference / (1000 * 60)) % 60),
-  //         seconds: Math.floor((difference / 1000) % 60),
-  //       });
-  //     } else {
-  //       clearInterval(timer);
-  //     }
-  //   }, 1000);
-
-  //   return () => clearInterval(timer);
-  // }, [targetDate]);
-
-  // === Highlights Data ===
-  const highlights = [
-    { icons: "🏫", number: 21, text: "Years of Glorious Legacy" },
-    { icons: "🎓", number: 500, text: "Proud Alumni" },
-    { icons: "🏆", number: 1000, text: "Students" },
-    { icons: "🏠", number: 50, text: "Teachers" },
-  ];
-
   const [counts, setCounts] = useState(highlights.map(() => 0));
 
-  // === GSAP Counter Animation (FIXED) ===
   useEffect(() => {
     const counterObjects = [];
 
@@ -72,15 +42,14 @@ export default function Highlights() {
       });
     });
 
-    ScrollTrigger.refresh(); // Important
-  }, []);
+    ScrollTrigger.refresh();
+  }, []);  // ✅ YES, keep this empty now
 
   return (
     <section
       className="highlights-section"
       style={{ backgroundImage: "url('/assets/bg-2.jpg')" }}
     >
-      <hr className="hr" />
       <h2>Our Highlights</h2>
       <div className="highlightline"></div>
 
@@ -93,8 +62,6 @@ export default function Highlights() {
           </div>
         ))}
       </div>
-
-      <hr className="hr" />
     </section>
   );
 }

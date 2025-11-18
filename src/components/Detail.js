@@ -50,19 +50,19 @@ export default function Detail() {
     <section className="fixed_flex">
 
     <figure  className="flex_content">
-    <img src="https://i.postimg.cc/0yF7CRkX/01.jpg" alt="" loading="lazy" />
+    <img src="./assets/detailimg1.webp" alt=""  />
     </figure>
 
     <figure className="flex_content">
-    <img src="https://i.postimg.cc/wBNLff3q/02.jpg" alt="" loading="lazy" />
+    <img src="./assets/detailimg2.webp" alt=""  />
     </figure>
 
     <figure className="flex_content">
-    <img src="https://i.postimg.cc/7hK2GjtV/03.jpg" alt="" loading="lazy" />
+    <img src="./assets/detailimg4.webp" alt=""  />
     </figure>
 
     <figure className="flex_content">
-    <img src="https://i.postimg.cc/tCgPQC7m/04.jpg" alt="" loading="lazy" />
+    <img src="./assets/detailimg5.jpg" alt=""  />
     </figure>
 
     </section>

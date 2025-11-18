@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram} from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -40,12 +40,10 @@ export default function Footer() {
             <p>📧 info@vpskota.co.in</p>
             <p>📞 7340065179, 7340065179</p>
 
-            {/* <div className="social-links">
-              <a href=""><FaFacebookF /></a>
-              <a href=""><FaInstagram /></a>
-              <a href=""><FaLinkedinIn /></a>
-              <a href=""><FaYoutube /></a>
-            </div> */}
+            <div className="social-links">
+              <a href="https://www.facebook.com/people/Vidyashram-Public-School/100063848952012/"><FaFacebookF /></a>
+              <a href="https://www.instagram.com/vidyashrampublicschool/"><FaInstagram /></a>
+            </div>
           </div>
 
         </div>
