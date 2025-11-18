@@ -1,37 +1,71 @@
-import React from "react";
+import React, { useState } from "react";
 import "./header.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 export default function Header() {
 
-useGSAP(() =>{
+  const [formData, setFormData] = useState({
+    student_name: "",
+    father_name: "",
+    contact: "",
+    class: "",
+    previous_school_name: "",
+    address: "",
+  });
 
-   gsap.from(".section1heading",{
-    opacity:0,
-    y: -100,
-    duration: 1,
-   })
+  // Animation
+  useGSAP(() => {
+    gsap.from(".section1heading", { opacity: 0, y: -100, duration: 1 });
+    gsap.from(".section1form", { opacity: 0, x: 100, duration: 1.2 });
+    gsap.from(".section1boxs", { y: 100, duration: 1, stagger: 0.3 });
+  }, []);
 
-   gsap.from(".section1form",{
-    opacity:0,
-    x: 100,
-    duration: 1.2,
-   })
-
-    gsap.from(".section1boxs", {
-      y: 100,
-    duration: 1,
-    stagger: 0.3,  
+  // Handle Input
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
     });
+  };
 
-},[])
+  // Submit Function
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formdata = new FormData();
+    formdata.append("student_name", formData.student_name);
+    formdata.append("father_name", formData.father_name);
+    formdata.append("contact", formData.contact);
+    formdata.append("class", formData.class);
+    formdata.append("school_name", ""); // If needed add field
+    formdata.append("previous_school_name", formData.previous_school_name);
+    formdata.append("address", formData.address);
+
+    try {
+      const response = await fetch(
+        "https://moerp.modevcloud.com/index.php/api/Enquiries_api/saveenquiry",
+        {
+          method: "POST",
+          body: formdata,
+        }
+      );
+
+      const result = await response.json();
+      console.log("API Response:", result);
+      alert("Enquiry submitted successfully!");
+
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Something went wrong!");
+    }
+  };
 
   return (
     <>
       {/* ==== HERO SECTION ==== */}
       <div className="section1">
-        
+
         <div className="bannerimg">
           <img src="/assets/banner.png" alt="Banner" />
 
@@ -46,68 +80,64 @@ useGSAP(() =>{
           {/* ==== CONTACT FORM ==== */}
           <div className="section1form">
             <h2>Admission Enquiry</h2>
-            <form className="contact-form">
+
+            <form className="contact-form" onSubmit={handleSubmit}>
 
               <div className="field-row">
-              <div className="field">
-              <label>Student Name<span className="required">*</span></label>
-              <input type="text" name="Student Name" placeholder="Student Name"  />
-                </div>
                 <div className="field">
-                  <label> Father's Name<span className="required">*</span></label>
-                  <input type="text" name="studentLastName" placeholder="Father Name"  />
-                </div>
-              </div>
-
-              <div className="field-row">
-
-                <div className="field">
-                <label> Contact No. <span className="required">*</span></label>
-                <input type="tel" name="studentPhone" placeholder="Contact Number" />
+                  <label>Student Name*</label>
+                  <input type="text" name="student_name" onChange={handleChange} />
                 </div>
 
                 <div className="field">
-                <label> Admission in Class <span className="required">*</span></label>
-                <select name="Class" className="class-select" defaultValue="">
-                  <option value="" > Select Class </option>
-                  <option value="I">Class I</option>
-                  <option value="II">Class II</option>
-                  <option value="III">Class III</option>
-                  <option value="IV">Class IV</option>
-                  <option value="V">Class V</option>
-                  <option value="VI">Class VI</option>
-                  <option value="VII">Class VII</option>
-                  <option value="VIII">Class VIII</option>
-                  <option value="IX">Class IX</option>
-                  <option value="X">Class X</option>
-                  <option value="XI">Class XI</option>
-                  <option value="XII">Class XII</option>
-                </select>
-              </div>
-
-
-              
-              
-              </div>
-
-
-              <div className="field-row">
-                  <div className="field"><label> Previous School<span className="required">*</span></label>
-                  <input type="text" name="Previous School" placeholder="Previous School Name" />
+                  <label>Father's Name*</label>
+                  <input type="text" name="father_name" onChange={handleChange} />
                 </div>
               </div>
 
               <div className="field-row">
                 <div className="field">
-                  <label>Address <span className="required">*</span></label>
-                  <input type="text" name="studentAddress" placeholder="Enter Address" />
+                  <label>Contact No.*</label>
+                  <input type="tel" name="contact" onChange={handleChange} />
+                </div>
+
+                <div className="field">
+                  <label>Admission in Class*</label>
+                  <select name="class" onChange={handleChange}>
+                    <option value="">Select Class</option>
+                    <option value="I">Class I</option>
+                    <option value="II">Class II</option>
+                    <option value="III">Class III</option>
+                    <option value="IV">Class IV</option>
+                    <option value="V">Class V</option>
+                    <option value="VI">Class VI</option>
+                    <option value="VII">Class VII</option>
+                    <option value="VIII">Class VIII</option>
+                    <option value="IX">Class IX</option>
+                    <option value="X">Class X</option>
+                    <option value="XI">Class XI</option>
+                    <option value="XII">Class XII</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="field-row">
+                <div className="field">
+                  <label>Previous School*</label>
+                  <input type="text" name="previous_school_name" onChange={handleChange} />
+                </div>
+              </div>
+
+              <div className="field-row">
+                <div className="field">
+                  <label>Address*</label>
+                  <input type="text" name="address" onChange={handleChange} />
                 </div>
               </div>
 
               <button type="submit" className="btn btn_3">Enquiry Now</button>
-            </form>  
+            </form>
           </div>
-
 
         </div>
       </div>
@@ -116,27 +146,19 @@ useGSAP(() =>{
       <div className="section1boxs">
         <div className="box1">
           <h2 className="box1title">Holistic Learning</h2>
-          <p>
-            We go beyond textbooks, focusing on leadership, relationships, values, and life skills that prepare students for the real world.
-          </p>
+          <p>We go beyond textbooks...</p>
         </div>
 
         <div className="box2">
           <h2 className="box2title">Ready for the Future</h2>
-          <p>
-           Our philosophy blends timeless traditions with modern education to shape balanced individuals ready for any challenge.
-          </p>
+          <p>Our philosophy blends traditions...</p>
         </div>
 
         <div className="box3">
           <h2 className="box3title">Collaborative Growth</h2>
-          <p>
-           We believe education is a partnership between school, family, and the community. Your active involvement helps your child.
-          </p>
+          <p>We believe education is a partnership...</p>
         </div>
       </div>
     </>
   );
 }
-
-  
