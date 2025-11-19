@@ -31,21 +31,24 @@
 }
 
 .section1heading h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 500;
   line-height: 1.2;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #ffd700;
   text-shadow: 0 4px 10px rgba(0, 0, 0, 10);
 }
 
 .section1heading em {
   color: #f43333d3;
   font-weight: 800;
+   font-size: 1.8rem;
 }
 
 .section1heading span{
-   font-size: 2.5rem;
-   font-weight: 500;
-   color: #ffffff;
+   font-size: 1.6rem;
+   font-weight: 600;
+   color: #faf7f7;
    
 }
 
@@ -72,11 +75,12 @@
   margin-bottom: 20px;
   color: #ffd700;
   letter-spacing: 1px;
+  
 }
 
 /* ==== FIELD STRUCTURE ==== */
 .field-row {
-  display: flex;
+  /* display: flex; */
   gap: 16px;
   margin-bottom: 18px;
   flex-wrap: wrap;
@@ -92,7 +96,7 @@
   font-size: 1rem;
   margin-bottom: 6px;
   font-weight: 500;
-  color: #fff;
+  color: #f0e9e9;
 }
 
 .field .required {
@@ -106,14 +110,14 @@
 .class {
   width: 100%;
   padding: 10px 15px;
-  border-radius: 18px;
+  border-radius: 10px;
   border: none;
   outline: none;
   background: #fffbe7;
   font-size: 1rem;
   transition: all 0.3s ease;
   color: #000;
-  font-family: sans-serif !important;
+  /* font-family: sans-serif !important; */
   cursor: pointer;
 }
 
@@ -226,12 +230,14 @@
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.2;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #ffd700;
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
   }
 
   /* Make form smaller and reposition */
   .section1form {
-    top: 48%;
+    top: 50%;
     right: 2%;
     max-width: 350px;
     height: auto;
@@ -240,12 +246,14 @@
 
   .section1form h2 {
     font-size: 1.6rem;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ffd700;
   }
 
   /* Adjust input and button spacing */
   .contact-form input,
   .contact-form textarea {
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 3px;
   
   }
@@ -303,7 +311,9 @@
   }
 
   .section1heading h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ffd700;
   }
 
   /* 📋 Contact form */
@@ -315,18 +325,18 @@
     padding: 20px;
   }
 
-  .section1form h2 {
+  /* .section1form h2 {
     font-size: 1.2rem;
-  }
+  } */
 
   .contact-form input,
   .contact-form textarea {
-    font-size: 0.80rem;
+    font-size: 1rem;
     padding: 8px;
   }
   
   .field label{
-    font-size: 0.80rem;
+    font-size: 1rem;
   }
 
   .contact-form button.btn {
@@ -382,6 +392,8 @@
   .section1heading h1 {
     font-size: 2.7rem;
     line-height: 1.2;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ffd700;
   }
 
   /* Contact form */
@@ -394,10 +406,10 @@
     padding: 15px;
   }
 
-  .section1form h2 {
+  /* .section1form h2 {
     font-size: 1rem;
     text-align: center;
-  }
+  } */
 
   .contact-form input,
   .contact-form textarea {
@@ -406,7 +418,7 @@
   }
 
   .field label {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
 
   .contact-form button.btn {
@@ -476,10 +488,10 @@
     max-width: 460px;
   }
 
-  .section1form h2 {
+  /* .section1form h2 {
     font-size: 1rem;
     text-align: center;
-  }
+  } */
 
   .contact-form input,
   .contact-form textarea {
@@ -488,7 +500,7 @@
   }
 
   .field label {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
 
   .contact-form button.btn {
@@ -561,18 +573,18 @@
     max-width: 360px;
   }
 
-  .section1form h2 {
+  /* .section1form h2 {
     font-size: 1.1rem;
-  }
+  } */
 
   .contact-form input,
   .contact-form textarea {
-    font-size: 0.85rem;
+    font-size: 1rem;
     padding: 8px;
   }
 
   .field label {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
 
   .contact-form button.btn {
@@ -650,9 +662,9 @@
     max-width: 320px;
   }
 
-  .section1form h2 {
-    font-size: 0.95rem;
-  }
+  /* .section1form h2 {
+    font-size: 1rem;
+  } */
 
   .contact-form input,
   .contact-form textarea,

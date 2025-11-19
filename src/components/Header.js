@@ -112,6 +112,8 @@ export default function Header() {
               Welcome to <br />
               <em>Vidyashram</em> <span>Public School</span>
             </h1>
+            {/* <hr></hr> */}
+            {/* <h2 className="title"> Admissions Open 2026-27</h2> */}
           </div>
 
           {/* ==== FORM SECTION ==== */}
@@ -129,7 +131,7 @@ export default function Header() {
               </div>
             ) : (
               <form className="contact-form" onSubmit={handleSubmit}>
-                <h2>Admission Enquiry</h2>
+                <h2>Admission Enquiry</h2> 
 
                 <div className="field-row">
                   <div className="field">

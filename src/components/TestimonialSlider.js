@@ -10,10 +10,10 @@ import "./Testimonials.css"
 
 const testimonials = [
   {
-      name: 'Rahul Sharma',
-      role: 'Business Men',
+      name: 'Deepti Birla',
+      role: 'Housewife',
       text: 'Vidyashram Public School, Kota, has been instrumental in shaping my personality. The school emphasizes holistic development, combining academics, sports, and cultural activities. The teachers are supportive and inspire students to achieve excellence in every field.',
-      image: 'assets/testimonial/1.avif',
+      image: 'assets/testimonial/01.png',
       rating: 5
   },
   {
