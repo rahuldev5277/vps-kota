@@ -13,9 +13,8 @@ export default function Footer() {
           <div className="principal-text">
             <h3>Principal's Message</h3>
             <p>
-              Dear Students, Parents, and Well-wishers,<br />
-              It is a privilege to lead Vidyashram Public School, a CBSE co-educational institution committed to the motto <strong>“Soaring to Excellence.”</strong><br />
-              Here, education goes beyond classrooms — we nurture every child's intellectual growth, character, and life skills.
+              Dear Students, Parents, and Well-wishers,
+              It is a privilege to lead Vidyashram Public School, a CBSE co-educational institution committed to the motto <strong>“Soaring to Excellence.”</strong>Here, education goes beyond classrooms — we nurture every child's intellectual growth, character, and life skills.
             </p>
             <p>
               With over 15 years of experience as a Principal, I am proud to see our school evolve into a place where academic excellence meets skill education.
