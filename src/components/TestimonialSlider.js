@@ -55,8 +55,8 @@ const TestimonialSlider = () => {
           What Our Parents Say
         </h2>
       </div>
-      <p className="mt-2 text-center text-[#0b0914] text-base md:text-3xl py-2 px-2 md:px-8 border-2 rounded-3xl border-[#0b0914] inline-block font-[500]">
-        Hear from Our Successful Graduates
+      <p className="mt-2 m-2 text-center text-[#0b0914] text-base md:text-2xl py-2 px-2 md:px-8 border-2 rounded-3xl border-[#0b0914] inline-block font-[500]">
+         Real Stories from Parents Who Believe in Our School
       </p>
 
       <div className="relative w-full md:pl-[100px] pl-[60px] pr-[60px] md:pr-[100px] mt-6">

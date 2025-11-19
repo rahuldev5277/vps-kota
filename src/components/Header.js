@@ -92,7 +92,7 @@ export default function Header() {
       // Hide thankyou after 12 seconds
       setTimeout(() => {
         setIsSubmitted(false);
-      }, 12000);
+      }, 3000);
 
     } catch (error) {
       console.error("Error:", error);
