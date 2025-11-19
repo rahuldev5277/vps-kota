@@ -4,7 +4,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 export default function Header() {
-
   const [formData, setFormData] = useState({
     student_name: "",
     father_name: "",
@@ -38,7 +37,7 @@ export default function Header() {
     formdata.append("father_name", formData.father_name);
     formdata.append("contact", formData.contact);
     formdata.append("class", formData.class);
-    formdata.append("school_name", ""); // If needed add field
+    formdata.append("school_name", "");
     formdata.append("previous_school_name", formData.previous_school_name);
     formdata.append("address", formData.address);
 
@@ -53,8 +52,18 @@ export default function Header() {
 
       const result = await response.json();
       console.log("API Response:", result);
+
       alert("Enquiry submitted successfully!");
 
+      // 🚀 RESET FORM AFTER SUCCESS SUBMISSION
+      setFormData({
+        student_name: "",
+        father_name: "",
+        contact: "",
+        class: "",
+        previous_school_name: "",
+        address: "",
+      });
     } catch (error) {
       console.error("Error:", error);
       alert("Something went wrong!");
@@ -65,7 +74,6 @@ export default function Header() {
     <>
       {/* ==== HERO SECTION ==== */}
       <div className="section1">
-
         <div className="bannerimg">
           <img src="/assets/banner.png" alt="Banner" />
 
@@ -82,28 +90,49 @@ export default function Header() {
             <h2>Admission Enquiry</h2>
 
             <form className="contact-form" onSubmit={handleSubmit}>
-
               <div className="field-row">
                 <div className="field">
                   <label>Student Name*</label>
-                  <input type="text" name="student_name" onChange={handleChange} />
+                  <input
+                    type="text"
+                    name="student_name"
+                    placeholder="Student Name"
+                    value={formData.student_name}
+                    onChange={handleChange}
+                  />
                 </div>
 
                 <div className="field">
                   <label>Father's Name*</label>
-                  <input type="text" name="father_name" onChange={handleChange} />
+                  <input
+                    type="text"
+                    name="father_name"
+                    placeholder="Father's Name"
+                    value={formData.father_name}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
 
               <div className="field-row">
                 <div className="field">
                   <label>Contact No.*</label>
-                  <input type="tel" name="contact" onChange={handleChange} />
+                  <input
+                    type="tel"
+                    name="contact"
+                    placeholder="Contact No."
+                    value={formData.contact}
+                    onChange={handleChange}
+                  />
                 </div>
 
                 <div className="field">
                   <label>Admission in Class*</label>
-                  <select name="class" onChange={handleChange}>
+                  <select
+                    name="class"
+                    value={formData.class}
+                    onChange={handleChange}
+                  >
                     <option value="">Select Class</option>
                     <option value="I">Class I</option>
                     <option value="II">Class II</option>
@@ -124,21 +153,34 @@ export default function Header() {
               <div className="field-row">
                 <div className="field">
                   <label>Previous School*</label>
-                  <input type="text" name="previous_school_name" onChange={handleChange} />
+                  <input
+                    type="text"
+                    name="previous_school_name"
+                    placeholder="Previous School"
+                    value={formData.previous_school_name}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
 
               <div className="field-row">
                 <div className="field">
                   <label>Address*</label>
-                  <input type="text" name="address" onChange={handleChange} />
+                  <input
+                    type="text"
+                    name="address"
+                    placeholder="Address"
+                    value={formData.address}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
 
-              <button type="submit" className="btn btn_3">Enquiry Now</button>
+              <button type="submit" className="btn btn_3">
+                Enquiry Now
+              </button>
             </form>
           </div>
-
         </div>
       </div>
 
