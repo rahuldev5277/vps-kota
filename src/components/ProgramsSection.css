@@ -3,7 +3,7 @@
 .learningline{
   width: 500px;
   height: 4px;
-  background-color: #ee4500; /* Accent color (you can change) */
+  background-color: #ee4500; 
   margin: 5px auto 0;
   border-radius: 2px;
   position: relative;
@@ -12,9 +12,9 @@
 
 @media (max-width: 576px) {
   .learningline {
-    width: 250px;         /* smaller width for mobile */
-    height: 3px;          /* slightly thinner */
-    margin: 8px auto 0;   /* center it nicely */
+    width: 250px;         
+    height: 3px;          
+    margin: 8px auto 0;   
   }
 }
 
@@ -54,7 +54,7 @@
 }
 
 .programs-section {
-  padding: 80px 40px;
+  padding: 120px 40px 120px 40;
   text-align: center;
   background-color: #f8f9ff;
   font-family: 'Poppins', sans-serif;

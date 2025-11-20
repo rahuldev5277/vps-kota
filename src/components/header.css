@@ -218,6 +218,37 @@
 
 
 
+
+
+.sticky-admission-btn {
+  position: fixed;
+  top: 70%;
+  left: -70px;
+  padding: 10px 20px;
+  background: #ff5722;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+  transform: rotate(-90deg) !important;
+  writing-mode: horizontal-tb !important;
+}
+
+/* .sticky-admission-btn:hover {
+  transform: rotate(0deg) scale(1.07) !important;
+  background: #e64a19;
+} */
+
+
+
+
+
+
+
+
 @media (max-width: 1200px) {
   /* Reduce banner height */
   .bannerimg {

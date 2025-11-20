@@ -14,30 +14,21 @@ export default function Header() {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
-
-  // Contact error state
   const [error, setError] = useState("");
 
-  // Animation
   useGSAP(() => {
     gsap.from(".section1heading", { opacity: 0, y: -100, duration: 1 });
     gsap.from(".section1form", { opacity: 0, x: 100, duration: 1.2 });
     gsap.from(".section1boxs", { y: 100, duration: 1, stagger: 0.3 });
   }, []);
 
-  // Handle Input with Validation
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    // CONTACT VALIDATION – only 10 digits allowed
     if (name === "contact") {
       if (/^\d{0,10}$/.test(value)) {
         setFormData({ ...formData, [name]: value });
-
-        // remove error when valid
-        if (value.length === 10) {
-          setError("");
-        }
+        if (value.length === 10) setError("");
       }
       return;
     }
@@ -45,11 +36,9 @@ export default function Header() {
     setFormData({ ...formData, [name]: value });
   };
 
-  // Submit Function
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Prevent submit if contact not valid
     if (formData.contact.length !== 10) {
       setError("Please enter a valid 10-digit contact number.");
       return;
@@ -76,10 +65,8 @@ export default function Header() {
       const result = await response.json();
       console.log("API Response:", result);
 
-      // Show Thank You message
       setIsSubmitted(true);
 
-      // Reset form
       setFormData({
         student_name: "",
         father_name: "",
@@ -89,11 +76,9 @@ export default function Header() {
         address: "",
       });
 
-      // Hide thankyou after 12 seconds
       setTimeout(() => {
         setIsSubmitted(false);
       }, 3000);
-
     } catch (error) {
       console.error("Error:", error);
       alert("Something went wrong!");
@@ -112,25 +97,24 @@ export default function Header() {
               Welcome to <br />
               <em>Vidyashram</em> <span>Public School</span>
             </h1>
-         
           </div>
 
           {/* ==== FORM SECTION ==== */}
-          <div className="section1form">
+          
+          <div className="section1form" id="admissionForm">
 
-            {/* Toggle Thank You & Form */}
             {isSubmitted ? (
               <div className="thankyou-box text-center max-w-md mx-auto p-4">
                 <h2 className="text-2xl font-semibold mb-3">🎉 Thank You!</h2>
                 <p className="text-lg leading-relaxed">
                   Thank you for joining <span className="font-semibold">Vidyasram School! </span>
-                  We have received your admission enquiry.  
+                  We have received your admission enquiry.
                   Our team will contact you shortly.
                 </p>
               </div>
             ) : (
               <form className="contact-form" onSubmit={handleSubmit}>
-                <h2>Admission Enquiry</h2> 
+                <h2>Admission Enquiry</h2>
 
                 <div className="field-row">
                   <div className="field">
@@ -168,7 +152,6 @@ export default function Header() {
                       maxLength="10"
                     />
 
-                    {/* ERROR MESSAGE */}
                     {error && (
                       <p className="text-red-500 text-sm mt-1">{error}</p>
                     )}
@@ -193,7 +176,6 @@ export default function Header() {
                       <option value="IX">Class IX</option>
                       <option value="X">Class X</option>
                       <option value="XI">Class XI</option>
-                      {/* <option value="XII">Class XII</option> */}
                     </select>
                   </div>
                 </div>
@@ -237,19 +219,31 @@ export default function Header() {
       <div className="section1boxs">
         <div className="box1">
           <h2 className="box1title">Holistic Learning</h2>
-           <p> The prospective parents/guardians should first register their ward for the class in which admission is desired. </p>
+          <p>The prospective parents/guardians should first register their ward for the class in which admission is desired.</p>
         </div>
 
         <div className="box2">
           <h2 className="box2title">Ready for the Future</h2>
-          <p> Vidyashram Public School is a center of excellence dedicated to nurturing young minds with knowledge, discipline, and values. </p>
+          <p>Vidyashram Public School is a center of excellence dedicated to nurturing young minds with knowledge, discipline, and values.</p>
         </div>
 
         <div className="box3">
           <h2 className="box3title">Collaborative Growth</h2>
-          <p> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
         </div>
       </div>
+
+  
+      <button
+        className="sticky-admission-btn"
+        onClick={() => {
+          document.getElementById("admissionForm").scrollIntoView({
+            behavior: "smooth",
+          });
+        }}
+      >
+        Admission Open
+      </button>
     </>
   );
 }

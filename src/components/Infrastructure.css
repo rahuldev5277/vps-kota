@@ -1,7 +1,7 @@
 /* ==== Gallery Main Section ==== */
 .gallerymainsection {
   width: 100%;
-  padding: 4rem 2rem;
+  padding: 120px 40px 120px 40px;
   background-color: #f8f9fa;
   display: flex;
   flex-direction: column;
