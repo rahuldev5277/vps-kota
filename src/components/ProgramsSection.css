@@ -125,8 +125,11 @@
 .program-title {
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   text-align: center;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #d34a12;
+
 }
 
 .program-age {
@@ -139,7 +142,7 @@
 
 .program-desc {
   font-size: 14px;
-  color: #333;
+  color: #282727;
   line-height: 1.6;
   margin-bottom: 15px;
 }

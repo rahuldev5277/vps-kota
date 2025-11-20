@@ -12,21 +12,21 @@ const programs = [
     description:
       "After registration, there will be no entrance test and interview for admission in Nursery, class L.K.G., and class H.K.G.",
     image: "/assets/kidsimg.jpg",
-    bgColor: "#ee4500",
+    bgColor: "#e7d8d2",
   },
   {
     title: "Primary",
     description:
       "After registration, there will be an entrance test and interview for the students seeking admissions in class I to class IX.",
     image: "/assets/geographylab.webp",
-    bgColor: "#f5ab35",
+    bgColor: "#d6c6ac",
   },
   {
     title: "Middle & Senior",
     description:
       "After registration, admission in classes X & XI is as per the rules and guidelines of C.B.S.E. subject to the availability of seats.",
     image: "/assets/physicslab.webp",
-    bgColor: "#3399ff",
+    bgColor: "#a3b1c0ff",
   },
 ];
 
@@ -75,17 +75,26 @@ export default function ProgramsSection() {
     <div className="learningline"></div>
     <p className="section-subtitle">Carefully designed programs to nurture every stage of your child’s growth.</p>
 
-    <div className="programs-grid">
-    {programs.map((item, index) => (
-    <div key={index} className="program-card" style={{ backgroundColor: item.bgColor }}>
-    <h3 className="program-title">{item.title}</h3>
-    <p className="program-desc">{item.description}</p>
-    <div className="program-image">
-    <img src={item.image} alt={item.title} />
+   <div className="programs-grid">
+  {programs.map((item, index) => (
+    <div
+      key={index}
+      className="program-card upgraded-card"
+      style={{ backgroundColor: item.bgColor }}
+    >
+      <h3 className="program-title">{item.title}</h3>
+
+      <div className="divider-line"></div>
+
+      <p className="program-desc">{item.description}</p>
+
+      <div className="program-image">
+        <img src={item.image} alt={item.title} />
+      </div>
     </div>
-    </div>
-    ))}
-    </div>
+  ))}
+</div>
+
     </section>
 
     </>

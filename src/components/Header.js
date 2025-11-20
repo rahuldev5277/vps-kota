@@ -112,8 +112,7 @@ export default function Header() {
               Welcome to <br />
               <em>Vidyashram</em> <span>Public School</span>
             </h1>
-            {/* <hr></hr> */}
-            {/* <h2 className="title"> Admissions Open 2026-27</h2> */}
+         
           </div>
 
           {/* ==== FORM SECTION ==== */}
@@ -146,11 +145,11 @@ export default function Header() {
                   </div>
 
                   <div className="field">
-                    <label>Father's Name*</label>
+                    <label>Father's / Mother's Name*</label>
                     <input
                       type="text"
                       name="father_name"
-                      placeholder="Father's Name"
+                      placeholder="Father's / Mother's Name"
                       value={formData.father_name}
                       onChange={handleChange}
                     />
@@ -194,7 +193,7 @@ export default function Header() {
                       <option value="IX">Class IX</option>
                       <option value="X">Class X</option>
                       <option value="XI">Class XI</option>
-                      <option value="XII">Class XII</option>
+                      {/* <option value="XII">Class XII</option> */}
                     </select>
                   </div>
                 </div>
@@ -215,7 +214,7 @@ export default function Header() {
                 <div className="field-row">
                   <div className="field">
                     <label>Address*</label>
-                    <input
+                    <textarea
                       type="text"
                       name="address"
                       placeholder="Address"

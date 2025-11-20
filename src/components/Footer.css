@@ -24,9 +24,10 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   position: absolute;
   top: -70px;
-  left: 50%;
+  left: 46%;
   transform: translateX(-50%);
   z-index: 2;
+  width: 40%;
 }
 
 .principal-img {
@@ -108,7 +109,7 @@
   font-size: 0.95rem;
   color: #ddd;
   margin: 0;
-  font-family: sans-serif !important;
+  /* font-family: sans-serif !important; */
 }
 
 /* ==== SOCIAL ICONS ==== */
@@ -160,7 +161,7 @@
 
   /* Principal card smaller */
   .principal-card {
-    max-width: 750px;
+    max-width: 600px;
     padding: 1.2rem;
   }
 
@@ -236,10 +237,11 @@
 
   /* Principal card */
   .principal-card {
-    max-width: 95%;
+    max-width: 90%;
     flex-direction: column;
     text-align: center;
     padding: 1rem;
+    width: 90%;
   }
 
   .principal-img {

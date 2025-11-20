@@ -87,9 +87,10 @@
    CARDS
 ========================= */
 .admission_card {
-  width: 260px;
+  width: 22%;
   height: 300px;
-  padding: 20px;
+  padding: 10px;
+  margin: 10px;
   border-radius: 15px;
   background: #fff;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);

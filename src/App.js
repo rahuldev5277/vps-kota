@@ -23,7 +23,7 @@ function App() {
     <About/>
     <Admission/>
     <ProgramsSection/>
-    <Events/>
+    {/* <Events/> */}
     <Highlights/>
     <Infrastructure/>
     <TestimonialSlider/>
