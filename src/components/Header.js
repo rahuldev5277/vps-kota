@@ -242,7 +242,7 @@ export default function Header() {
           });
         }}
       >
-        Admission Open
+      Admissions Open Apply Now
       </button>
     </>
   );
