@@ -180,7 +180,7 @@ export default function Header() {
                   </div>
                 </div>
 
-                <div className="field-row">
+                {/* <div className="field-row">
                   <div className="field">
                     <label>Previous School*</label>
                     <input
@@ -191,7 +191,7 @@ export default function Header() {
                       onChange={handleChange}
                     />
                   </div>
-                </div>
+                </div> */}
 
                 <div className="field-row">
                   <div className="field">
@@ -242,7 +242,7 @@ export default function Header() {
           });
         }}
       >
-      Admissions Open Apply Now
+      Admissions Open-Apply Now!
       </button>
     </>
   );

@@ -127,11 +127,15 @@ const Infrastructure = () => {
                   </div>
                 </div>
               ))}
+              
             </div>
 
           </div>
         </div>
+
       </div>
+
+      
 
       {/* ==== PREVIEW CAROUSEL ==== */}
       {currentIndex !== null && (

@@ -76,24 +76,40 @@ export default function ProgramsSection() {
     <p className="section-subtitle">Carefully designed programs to nurture every stage of your child’s growth.</p>
 
    <div className="programs-grid">
-  {programs.map((item, index) => (
-    <div
-      key={index}
-      className="program-card upgraded-card"
-      style={{ backgroundColor: item.bgColor }}
-    >
-      <h3 className="program-title">{item.title}</h3>
+      {programs.map((item, index) => (
+        <div
+          key={index}
+          className="program-card upgraded-card"
+          style={{ backgroundColor: item.bgColor }}
+        >
+          <h3 className="program-title">{item.title}</h3>
 
-      <div className="divider-line"></div>
+          <div className="divider-line"></div>
 
-      <p className="program-desc">{item.description}</p>
+          <p className="program-desc">{item.description}</p>
 
-      <div className="program-image">
-        <img src={item.image} alt={item.title} />
-      </div>
+          <div className="program-image">
+            <img src={item.image} alt={item.title} />
+          </div>
+        </div>
+      ))}
+      
     </div>
-  ))}
-</div>
+     <div className="row mt-10">
+        <div className="col-md-4 mx-auto text-center">
+          <button
+            className="admission-btn"
+            onClick={() => {
+              document.getElementById("admissionForm").scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            Take the First Step — Enroll Today!
+          </button>
+        </div>
+      </div>
+
 
     </section>
 

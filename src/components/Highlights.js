@@ -46,10 +46,12 @@ export default function Highlights() {
   }, []);  // ✅ YES, keep this empty now
 
   return (
+    
     <section
       className="highlights-section"
       style={{ backgroundImage: "url('/assets/bg-2.jpg')" }}
     >
+     
       <h2>Our Highlights</h2>
       <div className="highlightline"></div>
 

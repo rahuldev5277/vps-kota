@@ -48,8 +48,21 @@ const testimonials = [
 
 const TestimonialSlider = () => {
   return (
+    
     <div className="w-full flex flex-col items-center pt-10 bg-white px-0 md:px-36">
-     
+        <div className="flex justify-center">
+          <button
+          className="admission-btn"
+          onClick={() => {
+            document.getElementById("admissionForm").scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+        >
+       Take the First Step — Enroll Today!
+        </button>
+      </div>
+    
       <div className="flex justify-center">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-[#060606] mb-4 border-b-[4px] border-[#ee4500] py-1">
           What Our Parents Say
